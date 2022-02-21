@@ -8,7 +8,7 @@ const levels ={
     hard: 10
 }
 //change level
-let currentLevel = levels.hard;
+let currentLevel = levels.easy;
 
 // difficulty button 
 document.getElementById('buttoneasy')
@@ -69,6 +69,9 @@ function matchLines (){
     if (textInput.value === currentLine.innerText) {
         message.innerText = 'Correct'
         return true;
+      let lineDown = document.getElementById("linedown")
+     ///// problem trying to get line down animatioon to reset whern correct answer typed 
+        
 
     } else{
         message.innerHTML = '';

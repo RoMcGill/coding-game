@@ -9,3 +9,8 @@ fix "simple syntax erroe forgot to put = after const before string of lines "
 
 issue i am having is figuring out how to link the current level and the diffrent level buttons 
 I am thinking an if statement ( if easy clicked set level to easy ) or (on mouse click set current level to event ? )
+
+
+bug cant get animation to rest when correct answer is typed 
+
+fix ....  ......?
