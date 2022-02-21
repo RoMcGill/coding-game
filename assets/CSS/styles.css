@@ -60,3 +60,6 @@ body{
     float: right;
     padding-right: 50px;
 }
+.score{
+    text-align: center;
+}
