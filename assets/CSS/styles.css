@@ -1,0 +1,62 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: darkgray;
+    font-family: sans-serif;
+
+}
+.heading{
+    background-color: antiquewhite;
+    color: black;
+    height: 10vh;
+    text-align: center;
+    padding-top: 10px;
+}
+.about-section-container{
+    width: 90vw;
+    height: 20vh;
+    background-color: beige;
+    margin: 0 auto;
+
+}
+.about-section{
+    text-align: center;
+    padding-top: 30px;
+}
+.game-area{
+    background-color: aliceblue;
+    width: 90vw;
+    height: 50vh;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+    
+
+}
+.game-play-area{
+    background-color: rgb(57, 160, 48);
+    width: 90vw;
+    height: 40vh;
+    margin: 0 auto;
+    margin-top: 100px;
+  
+
+
+}
+.result-area{
+    text-align: center;
+    
+}
+.correct{
+    float: left;
+    padding-left: 50px;
+
+}
+.incorrect{
+
+    float: right;
+    padding-right: 50px;
+}
