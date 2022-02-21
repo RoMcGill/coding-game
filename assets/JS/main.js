@@ -8,8 +8,12 @@ const levels ={
     hard: 10
 }
 //change level
-const currentLevel = levels.hard;
+let currentLevel = levels.hard;
 
+// difficulty button 
+document.getElementById('buttoneasy')
+document.getElementById('buttonmedium')
+document.getElementById('buttonhard')
 
 
 
