@@ -1,6 +1,6 @@
 window.addEventListener('load',init)
 //global variables
-let time = 5;
+let time = 10;
 let score= 0;
 let runGame;
 
@@ -18,8 +18,6 @@ const lines =
 
     '<h1>My First Heading</h1>',
     '<p>My first paragraph.</p>',
-    '<a id=logo><img src=images/logo.gifalt=Logo</a>',
-    '<ul><li><a href=>Home</a></li><li><a href=>About</a></li><li><a href=>Services</a></li><li><a href=>Contact</a></li></ul> ',
     '<h1>Really big title 2.0</h1>',
     '<h2>Simple, yet engaging and descriptive subtitle</h2>',
     '<div id="call-to-action"><a href="#" class="btn btn-large">Primary call to  action</a>',
@@ -30,6 +28,9 @@ const lines =
 function init (){
     // load phrase from array
     showLine(lines);
+    // call countdown every second
+    setInterval(countdown, 1000);
+    setInterval(checkStatus, 50)
 
 }
 // Pick & show random word
@@ -37,8 +38,25 @@ function showLine(lines) {
     // Generate random array index
     const randIndex = Math.floor(Math.random() * lines.length);
     // Output random word
-    currentLine.innerHTML = lines[randIndex];
+    currentLine.innerText = lines[randIndex];
   }
-  console.log(line);
+ //countdown timer
+ function countdown() {
+     // make sure time is >0
+     if(time>0){
+         time--;
 
+     } else if (time===0) {
 
+        isPlaying = false;
+
+     }
+     timeDisplay.innerHTML = time
+ }
+
+//check game status
+function checkStatus(){
+    if (!isPlaying && time === 0) {
+        message.innerHTML = 'Game over';
+    }
+}
