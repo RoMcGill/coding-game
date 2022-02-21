@@ -4,13 +4,14 @@
     padding: 0;
 }
 body{
-    background-color: darkgray;
+    background-color: black;
     font-family: sans-serif;
+    color: green;
 
 }
 .heading{
-    background-color: antiquewhite;
-    color: black;
+    background-color: black;
+    color: green;
     height: 10vh;
     text-align: center;
     padding-top: 10px;
@@ -18,7 +19,7 @@ body{
 .about-section-container{
     width: 90vw;
     height: 20vh;
-    background-color: beige;
+    background-color: black;
     margin: 0 auto;
 
 }
@@ -27,7 +28,7 @@ body{
     padding-top: 30px;
 }
 .game-area{
-    background-color: aliceblue;
+    background-color: black;
     width: 90vw;
     height: 50vh;
     margin: 0 auto;
@@ -37,13 +38,23 @@ body{
 
 }
 .game-play-area{
-    background-color: rgb(57, 160, 48);
+    background-color: rgba(1,19,3,1.9);
     width: 90vw;
     height: 40vh;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 30px;
   
 
+
+}
+#text-input{
+    background-color: rgba(1,19,3,1.9);
+    resize: none;
+    margin-top: 80px;
+    margin-bottom: ;
+    color : green;
+    text-align: center;
+   
 
 }
 .result-area{
@@ -63,3 +74,23 @@ body{
 .score{
     text-align: center;
 }
+.linedown {
+    animation: 2s anim-linedown ease-out infinite;
+  }
+  @keyframes anim-linedown {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
