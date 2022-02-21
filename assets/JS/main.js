@@ -1,13 +1,26 @@
 window.addEventListener('load',init)
 //global variables
-let time = 10;
+
+// available levels
+const levels ={
+    easy: 30,
+    medium: 20,
+    hard: 10
+}
+//change level
+const currentLevel = levels.hard;
+
+
+
+
+let time = currentLevel;
 let score= 0;
 let runGame;
 
 //DOM elemnets
-const wordInput = document.querySelector('#text-input');
+const textInput = document.querySelector('#text-input');
 const currentLine = document.querySelector('#current-phrase');
-const socreDisplay = document.querySelector('#score');
+const scoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time');
 const message = document.querySelector('#message');
 const seconds = document.querySelector('#seconds');
@@ -26,13 +39,40 @@ const lines =
 
 //initialize game
 function init (){
-    // load phrase from array
+    // load line from array
     showLine(lines);
+    // start matching on text input
+    textInput.addEventListener('input', startMatch);
     // call countdown every second
     setInterval(countdown, 1000);
-    setInterval(checkStatus, 50)
+    setInterval(checkStatus, 50);
 
 }
+//start match
+function startMatch() {
+    if (matchLines()){
+       console.log('Match');
+       runGame = true;
+       time = currentLevel + 1;
+       showLine(lines);
+       textInput.value = '';
+       score ++;
+    }
+    scoreDisplay.innerText = score;
+}
+// match current line to line input
+function matchLines (){
+    if (textInput.value === currentLine.innerText) {
+        message.innerText = 'Correct'
+        return true;
+
+    } else{
+        message.innerHTML = '';
+        return false;
+    }
+      
+}
+
 // Pick & show random word
 function showLine(lines) {
     // Generate random array index
@@ -48,7 +88,7 @@ function showLine(lines) {
 
      } else if (time===0) {
 
-        isPlaying = false;
+        runGame = false;
 
      }
      timeDisplay.innerHTML = time
@@ -56,7 +96,8 @@ function showLine(lines) {
 
 //check game status
 function checkStatus(){
-    if (!isPlaying && time === 0) {
+    if (!runGame && time === 0) {
         message.innerHTML = 'Game over';
+        score = 0;
     }
 }
