@@ -51,7 +51,7 @@ body{
     background-color: rgba(1,19,3,1.9);
     resize: none;
     margin-top: 80px;
-    margin-bottom: ;
+    
     color : green;
     text-align: center;
    
@@ -75,6 +75,7 @@ body{
     text-align: center;
 }
 .linedown {
+    top: 0;
     opacity: 0;
     animation: new-item-animation 20s linear forwards;
 }
@@ -90,4 +91,8 @@ body{
         transform : translateY(400px);
     }
 }
-  }
+
+.restart {
+    transform: translateY(-400px);
+}
+  
