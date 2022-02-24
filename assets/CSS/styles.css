@@ -4,13 +4,14 @@
     padding: 0;
 }
 body{
-    background-color: black;
+    background: rgb(0,0,0);
+background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rgba(0,157,255,1) 94%);
     font-family: sans-serif;
     color: green;
 
 }
 .heading{
-    background-color: black;
+  
     color: green;
     height: 10vh;
     text-align: center;
@@ -19,7 +20,7 @@ body{
 .about-section-container{
     width: 90vw;
     height: 20vh;
-    background-color: black;
+    
     margin: 0 auto;
 
 }
@@ -28,7 +29,7 @@ body{
     padding-top: 30px;
 }
 .game-area{
-    background-color: black;
+   
     width: 90vw;
     height: 50vh;
     margin: 0 auto;
@@ -38,7 +39,7 @@ body{
 
 }
 .game-play-area{
-    background-color: rgba(1,19,3,1.9);
+  
     width: 90vw;
     height: 40vh;
     margin: 0 auto;
@@ -48,10 +49,11 @@ body{
 
 }
 #text-input{
-    background-color: rgba(1,19,3,1.9);
+    background: rgb(0,0,0);
+    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rgba(0,157,255,1) 94%);
     resize: none;
     margin-top: 80px;
-    
+    width: 80vw;
     color : green;
     text-align: center;
    
