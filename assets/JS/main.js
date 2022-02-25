@@ -42,7 +42,12 @@ const lines =
     '<span>this is a span</span>',
     '<article> this is an article </article>',
     '<ol><li>list item 1</li></ol>',
-
+    '<script src="assets/JS/main.js"></script>'
+    '<button>Filter</button>'
+    '<input type="checkbox" id="checkbox">'
+    '<label for="checkbox">Slider</label>'
+    '<section class="hero-border">'
+    '<img src="./assets/images/hero.jpg" alt="hero image">'
 
 ];
 
