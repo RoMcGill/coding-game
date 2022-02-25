@@ -11,10 +11,13 @@ const levels ={
 let currentLevel = levels.easy;
 
 // difficulty button 
+
 document.getElementById('buttoneasy')
 document.getElementById('buttonmedium')
 document.getElementById('buttonhard')
 
+// start button 
+document.getElementById('start-button')
 
 
 let time = currentLevel;
@@ -50,6 +53,21 @@ const lines =
     '<img src="./assets/images/hero.jpg" alt="hero image">',
 
 ];
+let startGame = document.getElementById("start-button")
+startGame.onclick = function() {
+    
+    showLine(lines);
+    textInput.addEventListener('input', startMatch);
+    setInterval(countdown, 1000);
+    setInterval(checkStatus, 50);
+    textInput.classList.add('incorrect-background');
+    currentLine.classList.remove("linedown");
+    void currentLine.offsetWidth; 
+        
+        currentLine.classList.add("linedown");
+        
+
+}
 
 //initialize game
 function init (){
@@ -75,7 +93,8 @@ function startMatch() {
        showLine(lines);
        textInput.value = '';
        score ++;
-       setTimeout(currentLine.classList.add("linedown"),100)
+       setTimeout(currentLine.classList.add("linedown"),100);
+
 
     
 
