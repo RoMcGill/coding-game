@@ -61,6 +61,7 @@ function init (){
     setInterval(countdown, 1000);
     setInterval(checkStatus, 50);
     textInput.classList.add('incorrect-background');
+    
    
    
 
@@ -103,6 +104,7 @@ function matchLines (){
         
 
     } else{
+        textInput.classList.remove('correct-background');
         message.innerHTML = '';
         return false;
     }
@@ -120,6 +122,7 @@ function showLine(lines) {
     const randIndex = Math.floor(Math.random() * lines.length);
     // Output random line
     currentLine.innerText = lines[randIndex];
+    
 
   }
   
@@ -145,3 +148,4 @@ function checkStatus(){
         score = 0;
     }
 }
+
