@@ -49,8 +49,6 @@ background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rg
 
 }
 #text-input{
-    background: rgb(0,0,0);
-    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rgba(0,157,255,1) 94%);
     resize: none;
     margin-top: 80px;
     width: 80vw;
@@ -58,6 +56,14 @@ background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rg
     text-align: center;
    
 
+}
+.incorrect-background{
+    background: rgb(0,0,0);
+    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(147,40,40,1) 100%, rgba(0,157,255,1) 100%);
+}
+.correct-background{
+    background: rgb(0,0,0);
+    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgb(40, 147, 45) 100%, rgba(0,157,255,1) 100%);
 }
 .result-area{
     text-align: center;
@@ -98,3 +104,6 @@ background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rg
     transform: translateY(-400px);
 }
   
+#time {
+    display: none;
+}

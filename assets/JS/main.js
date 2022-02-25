@@ -60,6 +60,8 @@ function init (){
     // call countdown every second
     setInterval(countdown, 1000);
     setInterval(checkStatus, 50);
+    textInput.classList.add('incorrect-background');
+   
    
 
 }
@@ -73,16 +75,22 @@ function startMatch() {
        textInput.value = '';
        score ++;
        setTimeout(currentLine.classList.add("linedown"),100)
+
     
 
     }
     scoreDisplay.innerText = score;
+    
+    
+        
 }
+
 // match current line to line input
 function matchLines (){
     if (textInput.value === currentLine.innerText) {
         message.innerText = 'Correct'
-        currentLine.classList.remove("linedown") 
+        currentLine.classList.remove("linedown")
+        textInput.classList.add('correct-background')
 
         // trigger a DOM reflow 
         void currentLine.offsetWidth; 
@@ -99,7 +107,12 @@ function matchLines (){
         return false;
     }
       
+
 }
+
+//trying to get the text box to light up green if correct and red if incorrect 
+
+         
 
 // Pick & show random word
 function showLine(lines) {
