@@ -18,12 +18,12 @@ fix .... dom reflow as advised by tutor supporrt ....?
 
 
 
-# **"When They Said"**
+# **Code Hero**
 
 This is a website for people who love music, where the user can be a part of a community to learn about new music or teach others about their favourite music.
 
 -----
-Live site: https://romcgill.github.io/when-they-said/index.html
+Live site: https://romcgill.github.io/coding-game/
 
 -----
 
