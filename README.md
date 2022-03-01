@@ -165,30 +165,25 @@ When the site is viewed on a mobile device the imagery for the genre links (the 
 Using the z-index the character hovers over the nav bar when scrolling through the sections. This was implemented intentionally and serves a purpose, that purpose being that when the user is scrolling through that section of the page their attention is kept to that specific section. This was done to avoid any distraction and lead to a user clicking away before they found what they are looking for. It also adds a refreshing design element that may interest or excite the user.
 
 #  Wireframes
-### Homepage Wireframe
+### Desktop Wireframe for correct answer
 
-![](https://lh3.googleusercontent.com/z-tz-ylO_li4Ma11Dcr7WPeIJov7YrYWxXgy3c9t_kBdWxSkp4MU_MSL92qgTBi4woMR48vZvCIkdIgeK2Qwp302SZ2A0wwufxrTx-7z_b9Qy-LRwRV7SlglrY21_B_DDyKKMB_p)
+![](assets/Images/wireframe-answer-correct-desktop.png)
 
-### Mobile Wireframe -
+### Desktop Wireframe for incorrect answer
 
-![](https://lh3.googleusercontent.com/IELRQ3H7bYnjX8PJRNV4rUpFfdKtN698XFlmgesk51DYb3wZ-KQL90onRHfqm7-_rkGeWjimaGVDv_1q29u5tM0716yKgxOjS8XQgKyM_0l7cVF0st8Ppy7DeIY6UJ91MJ80RLXm)
+![](assets/Images/wireframe-answer-incorrect-desktop.png)
+### Small desktop Wireframe for correct answer
 
-### Genre Pages and Footer
+![](assets/Images/wireframe-small-desktop-correct-answer.png)
+### Small desktop Wireframe for incorrect answer
 
-![](https://lh5.googleusercontent.com/dlhmGBBX7CI4_VWVJbMUglw4CQkP-fH4x-uauxO8GqqQeYzif3lUGUAPCEvnXJJjd1ZictXJw4I0zxHMCwCITPxwPMBoQvFcb_eekoeQ-QrI2bzoMgEpX_xVqXfPvgryr2O3Txa1)
+![](assets/Images/wireframe-answer-wrong-small-desktop.png)
+### Mobile Wireframe for correct answer
 
-### Genre Page and Footer Mobile
+![](assets/Images/mobile-wireframe-correct-answer.png)
+### Mobile Wireframe for incorrect answer
 
-![](https://lh4.googleusercontent.com/UwmpnRAjwu0Wu-dMdlACus-Qxe-SiAyakaxHkaoVefHtVw5zZ1Ag-YjXcXPUuEpai1ZviyeSV8btyM4Hf5nIHXkcdFIcrLBYr5aoj01SB1mVpKNjyeEHtsk4059pu-exqw8muTjp)
-
-### Contribute Page Wireframe
-
-![](https://lh6.googleusercontent.com/Df6T3JECogovO4bvVH1izS0BQtwho8GEMA1wtSbnz3IfHcCYCToT99cSoJsQ1rpo4bM4qPDvayXQSdMmExLKrwtnfr6Giaa2BCliEoXWL9LghnthqHEfVZ3gpG18XqO-PMSw6v0g)
-
-### Contribute Page Wireframe Mobile
-
-![](https://lh5.googleusercontent.com/KRUdDBZeQOwbcxVXhNYRYsWY2CEW5dx2stwAhPoBt_XhamHUVJavJ9LvDgR-Kc7-3rzSg3RkSgGFHZgvlHvHQL9sWqwMkN4Z6PVLZ1lsTziPFulpae6YjG04BNOzy8bTDPiA5bd9)
-
+![](assets/Images/mobile-wireframe-wrong-answer.png)
 ## Features
 ____
 ### * New Feature *
