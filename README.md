@@ -27,7 +27,7 @@ Live site: https://romcgill.github.io/coding-game/
 
 -----
 
-![](https://lh6.googleusercontent.com/SE5vaPZYvSs6z5fxtQKW3_pkROMxD-rlhNAJICmKN4qVj9gjQtuYiCMxR4tUz8kxWxSzHti2BzMGYUULNOa0Tu-gBJFpHLAc7_xOC2v1NBJRCxPj168_d4Q1hPVbsGpS0-16L_xi)
+![](assets/Images/amiresponsive-placeholder.png)
 
 -----
 <details>
