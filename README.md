@@ -138,31 +138,33 @@ _____
 
 ## Typography
 
--   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font, this is in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate. It is also familiar and widely used. This gives the user a feeling of familiarity and trust towards the site.
+sans-serif font is the main font used throughout the whole website, I have chose to use this font as it it web safe and stable on all devices and browsers. I have used the 
+Image result for avatar font
+Papyrus font in the Fantasy family. This font is easy to read and also Intresting and familiar to the user as it is a widley used font.
 
-* (update) The new font family used for the nav bar is 'Segoe UI', I chose this font after receiving feedback from family and friends who thought that Montserrat was too sharp to be at the top of the page and would be better left for the page content instead. As a back-up I added in some other font families that are not unlinke Segoe UI with a final destination of sans-serif if all else fails.
 ```r
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+.body{
+    font-family: sans-serif;
+}
+
+.heading{
+    font-family: Fantasy;
+}
 ```
 
 ## Imagery
 
 
 
--The imagery used was purposely chosen, sized and positioned to convey a sense of professionalism and trustworthiness without being dry or boring. This use of imagery will promote a positive emotional response due to its fun and colourful nature.
-
-The hover animation used for the character images which make them bounce was also used to elevate the user experience.
+-The imagery (look and feel) used was done to create a sense of retro Gaming and old school " Hacking " link in the movies 
 
 
 
 ![](https://lh5.googleusercontent.com/m8YuWVrXgpg9_N7DjJ_8-DwCMz1RCqjtbS63IvlGrUyjpzsLt-VEk1bt_AO5Ij7O6bejYAFhj2onqmAg_5GDg-pGoSLSWAPrVSgdPBdojy9-ZOGZgmicWghdRcGgQvguqFUxYfvs)
 
-When the site is viewed on a mobile device the imagery for the genre links (the characters) hover over the nav bar at the top of the screen. This was intentional and also a Catch 22. Following best practice rules for UX it is unusual and untypical to have this happen. 
-### (This feature has since been removed following feedback from my mentor and other code institute students in the peer code review channel on slack.)
+When the site is viewed on a mobile device it will function as supposed to but the player will be at a disadvantage as thumbb typing is not very efficient for typing HTML code.
 
-![](https://lh4.googleusercontent.com/N4dHqRzplD8wAGFjkKEykYQj0kVDauKgX9CKXqd9YMxyb4rSXXuSByPQvjcnONO-AHOKpCjoKOEWxxNU2bPDK3B6HzKI7JIKLHRlcF-ocCEgnz5gFYMCtQJ1DQhyHrzEK2eAR902)
 
-Using the z-index the character hovers over the nav bar when scrolling through the sections. This was implemented intentionally and serves a purpose, that purpose being that when the user is scrolling through that section of the page their attention is kept to that specific section. This was done to avoid any distraction and lead to a user clicking away before they found what they are looking for. It also adds a refreshing design element that may interest or excite the user.
 
 #  Wireframes
 ### Desktop Wireframe for correct answer
