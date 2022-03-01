@@ -5,9 +5,10 @@
 }
 body{
     background: rgb(0,0,0);
-background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rgba(0,157,255,1) 94%);
+    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rgba(0,157,255,1) 94%);
     font-family: sans-serif;
     color: green;
+
 
 }
 .heading{
@@ -34,7 +35,7 @@ background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rg
 .game-area{
    
     width: 90vw;
-    height: 50vh;
+    height: 100vh;
     margin: 0 auto;
     text-align: center;
     padding-top: 20px;
@@ -106,7 +107,8 @@ background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rg
 .restart {
     transform: translateY(-400px);
 }
-  
+  /*
 #time {
     display: none;
 }
+*/

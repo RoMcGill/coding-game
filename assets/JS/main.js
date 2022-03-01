@@ -66,7 +66,6 @@ startGame.onclick = function() {
         
         currentLine.classList.add("linedown");
         
-
 }
 
 //initialize game
@@ -87,7 +86,6 @@ function init (){
 //start match
 function startMatch() {
     if (matchLines()){
-       console.log('Match');
        runGame = true;
        time = currentLevel + 1;
        showLine(lines);
