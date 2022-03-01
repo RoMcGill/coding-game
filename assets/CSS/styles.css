@@ -16,6 +16,9 @@ background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rg
     height: 10vh;
     text-align: center;
     padding-top: 10px;
+    font-family: Fantasy;
+    font-size: 25pt;
+    font-weight: bolder;
 }
 .about-section-container{
     width: 90vw;
