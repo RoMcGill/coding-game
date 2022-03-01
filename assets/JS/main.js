@@ -8,7 +8,7 @@ const levels ={
     hard: 10
 }
 //change level
-let currentLevel = levels.easy;
+let currentLevel = levels.medium;
 
 // difficulty button 
 
@@ -124,6 +124,7 @@ function matchLines (){
         textInput.classList.remove('correct-background');
         message.innerHTML = '';
         return false;
+        
     }
       
 
@@ -151,11 +152,16 @@ function showLine(lines) {
        
 
      } else if (time===0) {
-
+         /// bug alert wont go away onced clicked because time is still at zero
+        /// alert("Aw you lost, click start game to try again!");
+        
         runGame = false;
+        
+        
 
      }
      timeDisplay.innerHTML = time
+     
  }
  
 //check game status

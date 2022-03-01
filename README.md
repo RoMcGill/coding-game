@@ -17,6 +17,12 @@ fix .... dom reflow as advised by tutor supporrt ....?
 
 
 
+tuesday 1st of march bug 
+code to show alert that user has lost the game when time reches 0 wont go away because time is still ===0 
+
+fix ......     ......  ?
+
+
 
 # **Code Hero**
 
