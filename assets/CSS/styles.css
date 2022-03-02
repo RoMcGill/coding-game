@@ -43,6 +43,9 @@ body{
     
 
 }
+#time{
+    display: none;
+}
 .game-play-area{
   
     width: 90vw;
@@ -140,6 +143,10 @@ body{
     padding: 30px 50px;
     width: 600px;
     max-width: 100%;
+    text-align: center;
+}
+.modal h1{
+    font-family: fantasy;
 }
 
 button{

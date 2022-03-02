@@ -4,7 +4,7 @@ window.addEventListener('load',init)
 // available levels
 const levels ={
     easy: 30,
-    medium: 20,
+    medium: 18,
     hard: 10
 }
 //change level
@@ -62,6 +62,7 @@ startGame.onclick = function() {
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
+    time = currentLevel +1
         
 }
 
@@ -107,6 +108,7 @@ function matchLines (){
         message.innerText = 'Correct'
         currentLine.classList.remove("linedown")
         textInput.classList.add('correct-background')
+        score + 1
 
         // trigger a DOM reflow 
         void currentLine.offsetWidth; 
