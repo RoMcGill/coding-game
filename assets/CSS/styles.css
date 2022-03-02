@@ -134,7 +134,8 @@ body{
 
 
 .modal{
-    background-color: blue;
+    background: rgb(0,0,0);
+    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(67,127,186,1) 100%, rgba(0,157,255,1) 100%);
     border-radius: 10px;
     padding: 30px 50px;
     width: 600px;

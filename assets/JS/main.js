@@ -176,6 +176,7 @@ function checkStatus(){
 let closeModal = document.getElementById("close");
 closeModal.onclick = function() {
     modalContainer.style.display='none';
+    time = currentLevel +1;
 }
 
     
