@@ -169,8 +169,29 @@ function showLine(lines) {
 function checkStatus(){
     if (!runGame && time === 0) {
         message.innerHTML = 'Game over';
+        modalContainer.style.display='flex';
         score = 0;
         
-    }
+    }else 
+        modalContainer.style.display='none';
 }
 
+let closeModal = document.getElementById("close");
+closeModal.onclick = function() {
+    modalContainer.style.display='none';
+}
+
+    
+let open = document.getElementById ("open");
+let modalContainer = document.getElementById ("modal-container");
+
+
+
+/*
+open.addEventListener('click',()=>{
+    modalContainer.classList.add('show');
+});
+
+close.addEventListener('click',()=>{
+    modalContainer.classList.remove('show');
+});*/
