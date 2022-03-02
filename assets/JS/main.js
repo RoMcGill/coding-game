@@ -94,6 +94,7 @@ function startMatch() {
        setTimeout(currentLine.classList.add("linedown"),100);
 
 
+
     
 
     }
@@ -169,6 +170,7 @@ function checkStatus(){
     if (!runGame && time === 0) {
         message.innerHTML = 'Game over';
         score = 0;
+        
     }
 }
 

@@ -5,7 +5,7 @@
 }
 body{
     background: rgb(0,0,0);
-    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(68,40,147,1) 62%, rgba(0,157,255,1) 94%);
+    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgba(67,127,186,1) 100%, rgba(0,157,255,1) 100%);
     font-family: sans-serif;
     color: green;
 
@@ -113,3 +113,36 @@ body{
     display: none;
 }
 */
+
+.modal-container{
+    background-color: rgba(67,127,186,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    
+
+    
+}
+
+.modal{
+    background-color: blue;
+    border-radius: 10px;
+    padding: 30px 50px;
+    width: 600px;
+    max-width: 100%;
+}
+
+button{
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 10px;
+    color: aquamarine;
+    font-size: 14px;
+    padding: 10px 25px;
+}
