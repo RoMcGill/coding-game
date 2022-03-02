@@ -58,13 +58,10 @@ startGame.onclick = function() {
     
     showLine(lines);
     textInput.addEventListener('input', startMatch);
-    setInterval(countdown, 1000);
-    setInterval(checkStatus, 50);
     textInput.classList.add('incorrect-background');
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
-        
-        currentLine.classList.add("linedown");
+    currentLine.classList.add("linedown");
         
 }
 
@@ -73,7 +70,7 @@ function init (){
     // load line from array
     showLine(lines);
     // start matching on text input
-    textInput.addEventListener('input', startMatch);
+    textInput.addEventListener('input', startMatch,);
     // call countdown every second
     setInterval(countdown, 1000);
     setInterval(checkStatus, 50);
@@ -149,7 +146,7 @@ function showLine(lines) {
  function countdown() {
      // make sure time is >0
      if(time>0){
-         time--; 
+         time--;
        
 
      } else if (time===0) {
