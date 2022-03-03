@@ -76,6 +76,7 @@ function showModal(){
 closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = ''
+    textInput.value=''; 
         
 }
 // restart game on click of start button
