@@ -71,7 +71,7 @@ function init (){
     // load line from array
     showLine(lines);
     // start matching on text input
-    textInput.addEventListener('input', startMatch,);
+    textInput.addEventListener('input', checkInput);
     // call countdown every second
     setInterval(countdown, 1000);
     setInterval(checkStatus, 50);
@@ -82,7 +82,7 @@ function init (){
 
 }
 //start match
-function startMatch() {
+function checkInput() {
     if (matchLines()){
        runGame = true;
        time = currentLevel + 1;
@@ -90,6 +90,7 @@ function startMatch() {
        textInput.value = '';
        score ++;
        setTimeout(currentLine.classList.add("linedown"),100);
+       
 
 
 
@@ -123,6 +124,9 @@ function matchLines (){
     } else{
         textInput.classList.remove('correct-background');
         message.innerHTML = '';
+        currentLine.classList.remove("linedown");
+        void currentLine.offsetWidth; 
+        currentLine.classList.add("linedown");
         return false;
         
     }
@@ -170,6 +174,7 @@ function checkStatus(){
         message.innerHTML = 'Game over';
         modalContainer.style.display='flex';
         score = 0;
+       
         
     }else 
         modalContainer.style.display='none';
@@ -179,6 +184,7 @@ let closeModal = document.getElementById("close");
 closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = currentLevel +1;
+    textInput.value=''; 
 }
 
     
