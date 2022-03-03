@@ -14,7 +14,6 @@ let modalContainer = document.getElementById ("modal-container");
 let closeModal = document.getElementById("close");
 // restart button
 let restart = document.getElementById('btn')
-
 // lines of code in string to be displayed by the show line function
 const lines =
 [
@@ -36,18 +35,17 @@ const lines =
 ];
 
 
-
-
 //plays game
 function runGame(){
-    
-    
-   
-    
-    
+    textInput.classList.add('incorrect-background');
+     // start matching on text input
+        textInput.addEventListener('input', checkInput);
+        setInterval(checkStatus, 50);
+        
+        
+       
 }
 // gets random item from string
-
 function showLine(lines){
     const randIndex = Math.floor(Math.random() * lines.length);
     currentLine.innerText = lines[randIndex];
@@ -60,8 +58,7 @@ function timer() {
     // make sure time is >0
     if(time>0){
         time--;
-
-    } else if (time===0) {
+} else if (time===0) {
       runGame = false;
       showModal();
 }
@@ -73,16 +70,15 @@ function timer() {
 function showModal(){
     
      modalContainer.style.display='flex';  
-  
 
 }
+// close modal on click
 closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = ''
-   
-       
+        
 }
-
+// restart game on click of start button
 restart.onclick = function(){
 
     ('load',runGame)
@@ -92,6 +88,21 @@ restart.onclick = function(){
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
 
+}
+//checks for correct answer
+function checkStatus(){
+ 
+}
+function checkInput(){
+    if (textInput.innerText = customElements){
+        setInterval(correctAnswer, 50000)
+        message.innerText = 'Correct'
+        showLine(lines);
+        time=18;
+        currentLine.classList.remove("linedown");
+        void currentLine.offsetWidth; 
+        currentLine.classList.add("linedown");
+    }
 }
 
 
