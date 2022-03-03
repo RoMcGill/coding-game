@@ -5,13 +5,15 @@ const textInput = document.querySelector('#text-input');
 const currentLine = document.querySelector('#current-phrase');
 // timer
 const timeDisplay = document.querySelector('#time');
-let time = 4
+let time = ''
 // messege for game over
 const message = document.querySelector('#message');
 // modal container
 let modalContainer = document.getElementById ("modal-container");
 // close modal container
 let closeModal = document.getElementById("close");
+// restart button
+let restart = document.getElementById('btn')
 
 // lines of code in string to be displayed by the show line function
 const lines =
@@ -33,6 +35,17 @@ const lines =
     '<img src="./assets/images/hero.jpg" alt="hero image">',
 ];
 
+
+
+
+//plays game
+function runGame(){
+    
+    
+   
+    
+    
+}
 // gets random item from string
 
 function showLine(lines){
@@ -40,12 +53,6 @@ function showLine(lines){
     currentLine.innerText = lines[randIndex];
 }
 
-//plays game
-function runGame(){
-    showLine(lines)
-    timer(time)
-    
-}
 
 // countdown timer, decreasing 
 setInterval(timer, 1000);
@@ -71,12 +78,20 @@ function showModal(){
 }
 closeModal.onclick = function() {
     modalContainer.style.display='none';
+    time = ''
+   
+       
+}
+
+restart.onclick = function(){
+
+    ('load',runGame)
     showLine(lines);
-    time=3;
+    time=18;
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
-       
+
 }
 
 
