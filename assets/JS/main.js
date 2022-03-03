@@ -1,4 +1,4 @@
-window.addEventListener('load',initialize)
+window.addEventListener('load',ini)
 //global variables
 
 // available levels
@@ -117,9 +117,7 @@ function matchLines (){
         currentLine.classList.add("linedown");
         
         return true;
-      let lineDown = document.getElementById("linedown")
-     ///// problem trying to get line down animatioon to reset whern correct answer typed 
-        
+     
 
     } else{
         textInput.classList.remove('correct-background');
@@ -183,7 +181,7 @@ function checkStatus(){
 let closeModal = document.getElementById("close");
 closeModal.onclick = function() {
     modalContainer.style.display='none';
-    runGame = true;
+    time = currentLevel +1;
     textInput.value=''; 
 }
 

@@ -87,12 +87,17 @@ restart.onclick = function(){
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
+    focusTextarea()
+
 
 }
 //checks for correct answer
 function checkStatus(){
- 
+
 }
+
+
+
 function checkInput(){
     if (textInput.value === currentLine.innerText){
         setInterval(checkStatus, 50)
@@ -110,5 +115,8 @@ function checkInput(){
 
     }
 }
-
+// focus on textarea when play button clicked
+    function focusTextarea(){
+    document.getElementById("text-input").focus();
+}
 

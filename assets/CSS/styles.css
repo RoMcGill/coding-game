@@ -157,3 +157,7 @@ button{
     padding: 10px 25px;
     pointer-events: all;
 }
+#btn{
+    font-family: fantasy;
+    font-weight: bold;
+}
