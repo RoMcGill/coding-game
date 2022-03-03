@@ -43,7 +43,7 @@ function showLine(lines){
 //plays game
 function runGame(){
     showLine(lines)
-    timer()
+    timer(time)
     
 }
 
@@ -67,14 +67,16 @@ function showModal(){
     
      modalContainer.style.display='flex';  
   
-}
 
+}
 closeModal.onclick = function() {
     modalContainer.style.display='none';
-    
-
-    
+    showLine(lines);
+    time=3;
+    currentLine.classList.remove("linedown");
+    void currentLine.offsetWidth; 
+    currentLine.classList.add("linedown");
+       
 }
 
-  
 
