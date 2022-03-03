@@ -94,14 +94,20 @@ function checkStatus(){
  
 }
 function checkInput(){
-    if (textInput.innerText = customElements){
-        setInterval(correctAnswer, 50000)
+    if (textInput.value === currentLine.innerText){
+        setInterval(checkStatus, 50)
         message.innerText = 'Correct'
         showLine(lines);
         time=18;
         currentLine.classList.remove("linedown");
         void currentLine.offsetWidth; 
         currentLine.classList.add("linedown");
+        textInput.value='';
+        textInput.classList.add('correct-background')
+    }else{
+        textInput.classList.remove('correct-background')
+        message.innerText = ''
+
     }
 }
 
