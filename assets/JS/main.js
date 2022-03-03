@@ -1,4 +1,4 @@
-window.addEventListener('load',init)
+window.addEventListener('load',initialize)
 //global variables
 
 // available levels
