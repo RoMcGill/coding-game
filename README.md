@@ -123,26 +123,26 @@ Live site: https://romcgill.github.io/coding-game/
 ![]insert image
 #### Frequent User Goals
 
--   As a Frequent User, I want .
+-   As a Frequent User, I want there to be new code snipits for me to practice a more diverse range of code 
 
--   As a Frequent User, I want to .
+-   As a Frequent User, I want to be able to change dificulty levels as my coding skills improve 
 
--   As a Frequent User, I want to .
+-   As a Frequent User, I want to be challenged.
 
--  As a Frequent User I want to. 
+-  As a Frequent User I dont want to be hindered by technical issues in the game.
 
 ## Design
 _____
 ### Colour Scheme
 
--   The colour scheme used is Black, White and Alice Blue for great contrast and readability. Imagery was used to add extra pops of colour and interest to the basic palette.
+-   The colour scheme used is black, green and a range of blue and purple gradients. the black background is remineccent of old school coding (hackers) and retro video games, i think it suits the function of the site perfectly.
 
 ![](assets/Images/colour-pallete.png)
 
 ## Typography
 
 sans-serif font is the main font used throughout the whole website, I have chose to use this font as it it web safe and stable on all devices and browsers. I have used the 
-Image result for avatar font
+(avatar font)
 Papyrus font in the Fantasy family. This font is easy to read and also Intresting and familiar to the user as it is a widley used font.
 
 ```r
@@ -165,7 +165,7 @@ Papyrus font in the Fantasy family. This font is easy to read and also Intrestin
 
 ![]insert image
 
-When the site is viewed on a mobile device it will function as supposed to but the player will be at a disadvantage as thumbb typing is not very efficient for typing HTML code.
+When the site is viewed on a mobile device it will function as supposed to as it is fully responsive on all devices. but the player will be at a disadvantage as thumb typing is not very efficient for typing HTML code.
 
 
 
@@ -211,7 +211,8 @@ enter code here
 -----------
 
 2.  The site is easy to navigate 
-> " As a First Time Visitor, I want to be able to easily navigate throughout the site to find content that relates to my interests."
+> " As a First Time Visitor, I want to easily understand the game and why I should be interested in it.
+."
 -   enter text here
 
 Example (enter feature here.) 
@@ -240,23 +241,9 @@ CSS
 
 -----
 ## Features Still to be Added change these.
-1. I would like the form data to be automatically uploaded onto the live site.
-
-*When a user submits their favourite song and the meaning or story behind it I want that data to be uploaded to the site instantly or after an approval phase.*
-
-- This would require more knowledge of Java Script and backend frameworks.
-I have looked into this and have found someone using Google Apps Script to populate a google sheet from form data entries you can view this here. (https://support.google.com/docs/thread/48344518/solved-auto-update-auto-populate-the-form-with-realtime-data-from-sheet-after-response-is-submitted?hl=en).  
-- I think another way to achieve this could be to create a forum page and have the action of post and the URL linked to a new forum submission so when a user enters data into the form it will get sent to the new submissions area on the forum page. This may not be the best way to implement such a feature but might be my only option without knowledge of java script or any backend frameworks or API's.  
-
-2. I would like to have a hamburger menu on my nav bar for when viewing on mobile devices.  
-*On some devices the links can be cluttered and lack breathing room which I think negatively impacts the asthetic of the nav bar*. 
-This is possible to do with javascript and a media query and I intend to add this feature soon. I have started my research on youtube to grasp the basic concept one video I found helpful was https://www.youtube.com/watch?v=dIyVTjJAkLw&t=200s
-
-3. I would like to add the option to create an account and store users information and allow them to post/upload directly onto the site. To achieve this I would need more backend knowledge from what I have seen in this video https://www.youtube.com/watch?v=gCo6JqGMi30 it seems like PHP and MYSQLi databases must be used also.
-
-4. I would like to add a content block that bolcks mature content, in the case of explicit language or mature content. Java Script is required for this so I intend to add it at a later date. My research has brought me here https://vpsfix.com/1806/adult-content-warning-javascript-image-hosting-sites/ This details the process to add an adult content warning to the page as you enter. I want only relevent content to be blocked with a small checkbox above that the user must click to gain access to the content, all other content would still be visible if the checkbox was left unchecked.
-
-
+1. dififculty levels, there are 2 ways I will go about doing this
+option 1. is to have the timer set a difffrent times depending on which button the user clicks for example : hard = 10 seconds easy = 30 seconds.
+option 2. is to change the size of the text area, aswell as the time i think I could do this with media queries exampe: if hard button clicked textarea = 10vh by 80 vw, this along with a shortend timer would make for a very seamless chnage in the dificulty of the game. 
 ------
 ## Testing change this 
 
@@ -282,7 +269,37 @@ This is possible to do with javascript and a media query and I intend to add thi
 ----
  ## Bugs/Fixes add current  
  
- 1. 
+ 1. monday 21st feb
+JS code to show random phrase from string is showing undefined instead of daata from the string (could be a simple spelling/syntax error)
+
+fix "simple syntax error I forgot to put = after const before string of lines "
+
+
+issue i am having is figuring out how to link the current level and the diffrent level buttons 
+I am thinking an if statement ( if easy clicked set level to easy ) or (on mouse click set current level to event ? )
+
+
+bug cant get animation to reset when correct answer is typed 
+
+fix .... dom reflow, make animation void then call agin. as advised by tutor supporrt ....?
+
+
+
+tuesday 1st of march bug 
+code to show alert that user has lost the game when time reches 0 wont go away because time is still ===0 
+
+fix ......  modal close on click function resets the time to the time set by the dififculty level (stadard time is 18 seconds before adding diffrent dificulty levels)
+
+
+closeModal.onclick = function() {
+    modalContainer.style.display='none';
+    time = ''
+    textInput.value='';     ......  ?
+
+
+
+issue with incorrect line of code staying in the text area when the game ends, this would make the user delet the code before typing in a new line which would ruin the flow of the game. the fix was the same as the timer in the last bug. on the modal close function I added  textInput.value=''; this will clear the text area and allow the game to start fresh after a user looses and tries to play again.
+
  
 
 ------
