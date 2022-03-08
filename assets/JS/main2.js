@@ -16,9 +16,9 @@ let closeModal = document.getElementById("close");
 let restart = document.getElementById('btn');
 // score display
 let scoreDisplay = document.getElementById('score');
+// score
+let score = '';
 // lines of code in string to be displayed by the show line function
-let score = 0;
-
 const lines =
 [
     '<h1>Heading</h1>',
@@ -48,7 +48,7 @@ function runGame(){
      // start matching on text input
         textInput.addEventListener('input', checkInput);
         setInterval(checkStatus, 50);
-        score ++
+       
         
         
        
@@ -85,7 +85,6 @@ closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = ''
     textInput.value=''; 
-    score = 0;
         
 }
 // restart game on click of start button
@@ -94,7 +93,7 @@ restart.onclick = function(){
     ('load',runGame)
     showLine(lines);
     time=18;
-     score ++;
+    displayScore()
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
@@ -103,7 +102,7 @@ restart.onclick = function(){
 
 
 }
-scoreDisplay.innerText=score 
+
 //checks for correct answer
 function checkStatus(){
 
@@ -115,7 +114,8 @@ function checkInput(){
     if (textInput.value === currentLine.innerText){
         setInterval(checkStatus, 50)
         message.innerText = 'Correct'
-         score +1
+        displayScore()
+        score +1;
         showLine(lines);
         time=18;
         currentLine.classList.remove("linedown");
@@ -136,3 +136,9 @@ function checkInput(){
     document.getElementById("text-input").focus();
 }
 
+
+//display score
+function displayScore(){
+    scoreDisplay.innerHTML=score
+    score ++
+}

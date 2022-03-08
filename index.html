@@ -11,16 +11,19 @@
     <header class="heading">
         <h1>Code Hero</h1>
     </header>
+    <div class="result-area-container">
+        <div class="result-area">
+          <h3>Your Score!</h3> <h4 id ="score">''</h4>
 
+        </div>
+    </div>
     <div class="about-section-container">
         <div class="about-section">
             <h2> How To PLay!</h2>
             <h4>type the line of code before it leaves the box!
             </h4>
             <button value="Start" onclick="runGame;" id="btn" >PLAY!</button>
-
-                                        
-
+            
             <p id = "time">timer:</p>
             <p id = "message"></p>
         </div>
@@ -31,18 +34,15 @@
             <textarea name="text-input" id="text-input" cols="70" rows="10" style="font-size:20px"></textarea>
         </div>
     </div>
-    <div class="result-area-container">
-        <div class="result-area">
-            <h4 id ="score">''</h4>
-
-        </div>
-    </div>
+    
 
    
     <div class="modal-container" id = "modal-container">
     
         <div class="modal">
             <h1>Game Over!</h1>
+            <h2>your Score</h2>
+            <h3 id="score">''</h3>
             <p>Close and click Start Game to play again</p>
             <button id="close" onclick="closeModal">close</button>
         </div>
