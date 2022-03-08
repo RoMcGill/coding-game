@@ -17,6 +17,8 @@ let restart = document.getElementById('btn');
 // score display
 let scoreDisplay = document.getElementById('score');
 // lines of code in string to be displayed by the show line function
+let score = 0;
+
 const lines =
 [
     '<h1>Heading</h1>',
@@ -46,7 +48,7 @@ function runGame(){
      // start matching on text input
         textInput.addEventListener('input', checkInput);
         setInterval(checkStatus, 50);
-        scoreDisplay ++
+        score ++
         
         
        
@@ -83,7 +85,7 @@ closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = ''
     textInput.value=''; 
-    score = '';
+    score = 0;
         
 }
 // restart game on click of start button
@@ -92,14 +94,16 @@ restart.onclick = function(){
     ('load',runGame)
     showLine(lines);
     time=18;
+     score ++;
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
     focusTextarea()
-    scoreDisplay = '';
+  
 
 
 }
+scoreDisplay.innerText=score 
 //checks for correct answer
 function checkStatus(){
 
@@ -111,6 +115,7 @@ function checkInput(){
     if (textInput.value === currentLine.innerText){
         setInterval(checkStatus, 50)
         message.innerText = 'Correct'
+         score +1
         showLine(lines);
         time=18;
         currentLine.classList.remove("linedown");
@@ -118,13 +123,13 @@ function checkInput(){
         currentLine.classList.add("linedown");
         textInput.value='';
         textInput.classList.add('correct-background')
-        score + 1
+       
     }else{
         textInput.classList.remove('correct-background')
         message.innerText = ''
 
     }
-    scoreDisplay.innerText=score 
+    
 }
 // focus on textarea when play button clicked
     function focusTextarea(){

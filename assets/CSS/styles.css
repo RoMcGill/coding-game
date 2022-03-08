@@ -86,8 +86,10 @@ body{
     float: right;
     padding-right: 50px;
 }
-.score{
+#score{
     text-align: center;
+    padding-bottom: 10vh;
+    font-size: 20px;
 }
 .linedown {
     top: 0;
