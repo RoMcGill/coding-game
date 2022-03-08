@@ -355,6 +355,10 @@ closeModal.onclick = function() {
 
 issue with incorrect line of code staying in the text area when the game ends, this would make the user delet the code before typing in a new line which would ruin the flow of the game. the fix was the same as the timer in the last bug. on the modal close function I added  textInput.value=''; this will clear the text area and allow the game to start fresh after a user looses and tries to play again.
 
+
+
+bug level select not working .. on click function to show hard easy or medium lines of code works byut does not set or stay with the option that is clicked. I need to set the level at the start then run the game ******
+
  
 
 ------
