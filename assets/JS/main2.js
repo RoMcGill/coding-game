@@ -84,7 +84,8 @@ function showModal(){
 closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = ''
-    textInput.value=''; 
+    textInput.value='';
+    
         
 }
 // restart game on click of start button
@@ -93,7 +94,7 @@ restart.onclick = function(){
     ('load',runGame)
     showLine(lines);
     time=18;
-    displayScore()
+    score = 0 + 1
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");

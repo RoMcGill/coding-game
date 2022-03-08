@@ -95,6 +95,10 @@ body{
     top: 0;
     opacity: 0;
     animation: new-item-animation 20s linear forwards;
+    color: green;
+    background-color: rgba(138, 43, 226, 0.7);
+    border-radius: 25px;
+    box-shadow: 5px;
 }
 
 @keyframes new-item-animation {
