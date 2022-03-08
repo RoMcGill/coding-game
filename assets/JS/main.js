@@ -51,6 +51,7 @@ const lines =
     '<label for="checkbox">Slider</label>',
     '<section class="hero-border">',
     '<img src="./assets/images/hero.jpg" alt="hero image">',
+    '<link rel="stylesheet" href="assets/CSS/styles.css">'
 
 ];
 let startGame = document.getElementById("start-button")

@@ -198,42 +198,97 @@ ____
 
 
 ### Existing Features
-1. The design of the site is fully responsive on all modern devices.
-> " As a Frequent User I want to use the site on my phone while I am away from my desk."
-- The site uses a combination of the Grid layout and media queries to achieve this.
+1. The design of the game is fully responsive on all modern devices.
+> " As a Frequent User I want to play the game on my phone while I am away from my desk."
+- The Game uses vh and vw units of measurement when setting the sizes of every element. this is to ensure that every screen size is catered for.
 
-Example (code for characters to re-align if screen width is less than 800px) 
+Example
 ```
-enter code here
+.game-play-area{
+  
+    width: 90vw;
+    height: 40vh;
 ```
 ![screenshot of landing page on iphone](./assets/images/screenshot-of-landing-page-on-mobile.png)
 
 -----------
 
-2.  The site is easy to navigate 
+2.  The game is easy to navigate and understand 
 > " As a First Time Visitor, I want to easily understand the game and why I should be interested in it.
 ."
--   enter text here
+-   the game is uncomplicated as it gives you only one goal to achieve "type the line of code befor it reaches the bottom of the box" as the lines of code change randomly each time this also keeps the game fresh and exciting.
 
-Example (enter feature here.) 
+Example (random lines of code with animation to have the line fall ) 
 
-HTML
+JS
 ```{r}. 
- enter code here
+const lines =
+[
+    '<h1>Heading</h1>',
+    '<p>Paragraph</p>',
+    '<h1>big title</h1>',
+    '<h5>small title</h5>',
+    '<h2>descriptive subtitle</h2>',
+]
+ function showLine(lines){
+    const randIndex = Math.floor(Math.random() * lines.length);
+    currentLine.innerText = lines[randIndex];
 ```    
 CSS      
 ```{r}.
- 
+ .linedown {
+    top: 0;
+    opacity: 0;
+    animation: new-item-animation 20s linear forwards;
+}
+
+@keyframes new-item-animation {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+}
+
+    to {
+        opacity: 1;
+        transform : translateY(400px);
+    }
+}
 ```
 
-![screenshot of nav bar]insert image
+
 
 ------
 
-3. The footer element is at the bottom of each page with clearly defined social media links represented by icons.
-> " As Returning Visitor, I want to find community links and a way to personally connect with other community members on a platform that I am more familiar with."
-- The site uses icons from fontawesome.com to achieve this and some css styling to make the icons match the colour scheme of the site. 
+3. for the text area i used focus so that when a correct answer is typed or the game begins the area is ready for input. the text area also turns green when the correct answer is entered and is stays yellow when the current text does not match the current line of code.
 
+JS
+```{r}. 
+function checkInput(){
+    if (textInput.value === currentLine.innerText){
+        setInterval(checkStatus, 50)
+        message.innerText = 'Correct'
+        showLine(lines);
+        time=18;
+        currentLine.classList.remove("linedown");
+        void currentLine.offsetWidth; 
+        currentLine.classList.add("linedown");
+        textInput.value='';
+        textInput.classList.add('correct-background')
+    }else{
+        textInput.classList.remove('correct-background')
+        message.innerText = ''
+```
+CSS
+```{r}
+.incorrect-background{
+    background: rgb(0,0,0);
+    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgb(185, 183, 14) 100%, rgba(0,157,255,1) 100%);
+}
+.correct-background{
+    background: rgb(0,0,0);
+    background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgb(40, 147, 45) 100%, rgba(0,157,255,1) 100%);
+}
+```
 
 
 
