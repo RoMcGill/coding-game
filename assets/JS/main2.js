@@ -32,6 +32,9 @@ const lines =
     '<label for="checkbox">Slider</label>',
     '<section class="hero-border">',
     '<img src="./assets/images/hero.jpg" alt="hero image">',
+    '<link rel="stylesheet" href="assets/CSS/styles.css">',
+    '<div class="about-section"></div>',
+    '<button id = "open">open</button>',
 ];
 
 
