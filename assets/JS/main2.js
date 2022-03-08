@@ -13,7 +13,9 @@ let modalContainer = document.getElementById ("modal-container");
 // close modal container
 let closeModal = document.getElementById("close");
 // restart button
-let restart = document.getElementById('btn')
+let restart = document.getElementById('btn');
+// score display
+let scoreDisplay = document.getElementById('score');
 // lines of code in string to be displayed by the show line function
 const lines =
 [
@@ -44,6 +46,7 @@ function runGame(){
      // start matching on text input
         textInput.addEventListener('input', checkInput);
         setInterval(checkStatus, 50);
+        scoreDisplay ++
         
         
        
@@ -80,6 +83,7 @@ closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = ''
     textInput.value=''; 
+    score = '';
         
 }
 // restart game on click of start button
@@ -92,6 +96,7 @@ restart.onclick = function(){
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
     focusTextarea()
+    scoreDisplay = '';
 
 
 }
@@ -113,11 +118,13 @@ function checkInput(){
         currentLine.classList.add("linedown");
         textInput.value='';
         textInput.classList.add('correct-background')
+        score + 1
     }else{
         textInput.classList.remove('correct-background')
         message.innerText = ''
 
     }
+    scoreDisplay.innerText=score 
 }
 // focus on textarea when play button clicked
     function focusTextarea(){
