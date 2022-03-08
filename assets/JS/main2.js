@@ -18,27 +18,69 @@ let restart = document.getElementById('btn');
 let scoreDisplay = document.getElementById('score');
 // score
 let score = '';
+//easy medium hard buttons
+
+let easy = document.getElementById('easy-button')
+let medium = document.getElementById('medium-button')
+let hard = document.getElementById('hard-button')
+
+
 // lines of code in string to be displayed by the show line function
+
+/*
 const lines =
 [
     '<h1>Heading</h1>',
     '<p>Paragraph</p>',
     '<h1>big title</h1>',
     '<h5>small title</h5>',
+    '<button>Filter</button>',
     '<h2>descriptive subtitle</h2>',
     '<div id="call">call div</div>',
     '<span>this is a span</span>',
     '<article> this is an article </article>',
-    '<ol><li>list item 1</li></ol>',
-    '<script src="assets/JS/main.js"></script>',
-    '<button>Filter</button>',
-    '<input type="checkbox" id="checkbox">',
-    '<label for="checkbox">Slider</label>',
     '<section class="hero-border">',
-    '<img src="./assets/images/hero.jpg" alt="hero image">',
-    '<link rel="stylesheet" href="assets/CSS/styles.css">',
     '<div class="about-section"></div>',
     '<button id = "open">open</button>',
+    '<ol><li>list item 1</li></ol>',
+    '<script src="assets/JS/main.js"></script>',
+    '<input type="checkbox" id="checkbox">',
+    '<label for="checkbox">Slider</label>',
+    '<img src="./assets/images/hero.jpg" alt="hero image">',
+    '<link rel="stylesheet" href="assets/CSS/styles.css">',
+    
+];
+*/
+
+
+const easyLines =
+[
+    '<h1>Heading</h1>',
+    '<p>Paragraph</p>',
+    '<h1>big title</h1>',
+    '<h5>small title</h5>',
+    '<button>Filter</button>',
+];
+const mediumLines =
+[
+   
+    '<h2>descriptive subtitle</h2>',
+    '<div id="call">call div</div>',
+    '<span>this is a span</span>',
+    '<article> this is an article </article>',
+    '<section class="hero-border">',
+    '<div class="about-section"></div>',
+    '<button id = "open">open</button>',
+];
+const hardLines =
+[
+    '<ol><li>list item 1</li></ol>',
+    '<script src="assets/JS/main.js"></script>',
+    '<input type="checkbox" id="checkbox">',
+    '<label for="checkbox">Slider</label>',
+    '<img src="./assets/images/hero.jpg" alt="hero image">',
+    '<link rel="stylesheet" href="assets/CSS/styles.css">',
+    
 ];
 
 
@@ -88,21 +130,35 @@ closeModal.onclick = function() {
     
         
 }
+//dificulty select
+
+easy.onclick=function(){
+    showLine(easyLines)
+}
+medium.onclick=function(){
+    showLine(mediumLines)
+}
+hard.onclick=function(){
+    showLine(hardLines)
+}
+
+
+
+
+
 // restart game on click of start button
 restart.onclick = function(){
-
-    ('load',runGame)
-    showLine(lines);
+    showLine(easyLines)
     time=18;
     score = 0 + 1
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
     focusTextarea()
-  
-
-
 }
+
+
+
 
 //checks for correct answer
 function checkStatus(){
@@ -117,7 +173,7 @@ function checkInput(){
         message.innerText = 'Correct'
         displayScore()
         score +1;
-        showLine(lines);
+        showLine(easyLines);
         time=18;
         currentLine.classList.remove("linedown");
         void currentLine.offsetWidth; 

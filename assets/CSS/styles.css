@@ -64,6 +64,10 @@ body{
    
 
 }
+.levels{
+    margin: 0 auto;
+    text-align: center;
+}
 .incorrect-background{
     background: rgb(0,0,0);
     background: linear-gradient(177deg, rgba(0,0,0,1) 29%, rgb(185, 183, 14) 100%, rgba(0,157,255,1) 100%);
