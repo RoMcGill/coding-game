@@ -15,15 +15,9 @@ let closeModal = document.getElementById("close");
 // restart button
 let restart = document.getElementById('btn');
 // score display
-let scoreDisplay = document.getElementById('score');
+let scoreDisplay = document.getElementsByClassName('score');
 // score
 let score = 0;
-//easy medium hard buttons
-
-let easy = document.getElementById('easy-button')
-let medium = document.getElementById('medium-button')
-let hard = document.getElementById('hard-button')
-
 
 // lines of code in string to be displayed by the show line function
 
@@ -51,45 +45,13 @@ const lines =
     
 ];
 
-/*
-
-const easyLines =
-[
-    '<h1>Heading</h1>',
-    '<p>Paragraph</p>',
-    '<h1>big title</h1>',
-    '<h5>small title</h5>',
-    '<button>Filter</button>',
-];
-const mediumLines =
-[
-   
-    '<h2>descriptive subtitle</h2>',
-    '<div id="call">call div</div>',
-    '<span>this is a span</span>',
-    '<article> this is an article </article>',
-    '<section class="hero-border">',
-    '<div class="about-section"></div>',
-    '<button id = "open">open</button>',
-];
-const hardLines =
-[
-    '<ol><li>list item 1</li></ol>',
-    '<script src="assets/JS/main.js"></script>',
-    '<input type="checkbox" id="checkbox">',
-    '<label for="checkbox">Slider</label>',
-    '<img src="./assets/images/hero.jpg" alt="hero image">',
-    '<link rel="stylesheet" href="assets/CSS/styles.css">',
-    
-];
-*/
-
 //plays game
 function runGame(){
     textInput.classList.add('incorrect-background');
      // start matching on text input
         textInput.addEventListener('input', checkInput);
         setInterval(checkStatus, 50);
+        displayScore();
        
         
         
@@ -121,7 +83,7 @@ function timer() {
 function showModal(){
     
      modalContainer.style.display='flex';
-     displayScore  
+     scoreDisplay[1].innerHTML = score;
 
 }
 // close modal on click
@@ -135,28 +97,11 @@ closeModal.onclick = function() {
         
 }
 
-/*
-//dificulty select
-
-easy.onclick=function(){
-    showLine(easyLines)
-}
-medium.onclick=function(){
-    showLine(mediumLines)
-}
-hard.onclick=function(){
-    showLine(hardLines)
-}
-
-
-
-*/
-
 // restart game on click of start button
 restart.onclick = function(){
     showLine(lines)
     time=18;
-    score = 0 + 1
+    displayScore();
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
@@ -178,7 +123,7 @@ function checkInput(){
         setInterval(checkStatus, 50)
         message.innerText = 'Correct'
         displayScore()
-        score +1;
+        score ++
         showLine(lines);
         time=18;
         currentLine.classList.remove("linedown");
@@ -202,6 +147,16 @@ function checkInput(){
 
 //display score
 function displayScore(){
-    scoreDisplay.innerHTML=score
-    score ++
+    scoreDisplay[0].innerHTML=score;
+    
 }
+// anti cheat to log NO CHEATING IF USER USES COPY AND PASTE
+textInput.addEventListener(
+    'paste', function(e){
+        e.clipboardData.setData('text/plain',
+        '');
+        e.preventDefault();
+        console.log("NO CHEATING !")
+    }
+)
+
