@@ -150,13 +150,14 @@ function displayScore(){
     scoreDisplay[0].innerHTML=score;
     
 }
-// anti cheat to log NO CHEATING IF USER USES COPY AND PASTE
+// NO CHEATING IF USER USES COPY AND PASTE into the text area
 textInput.addEventListener(
-    'paste', function(e){
-        e.clipboardData.setData('text/plain',
-        '');
+    'paste', (e) => {
         e.preventDefault();
-        console.log("NO CHEATING !")
+        textInput.innerText = ("NO CHEATING !");
+        console.log("NO CHEATING !");
+    
+
     }
 )
 

@@ -166,6 +166,7 @@ button{
     font-size: 14px;
     padding: 10px 25px;
     pointer-events: all;
+    cursor: pointer;
 }
 #btn{
     font-family: fantasy;
