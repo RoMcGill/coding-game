@@ -1,28 +1,3 @@
-## Bug
-
-
-monday 21st feb
-JS code to show random phrase from string is showing undefined instead of daata from the string (could be a simple spelling/syntax error)
-
-fix "simple syntax erroe forgot to put = after const before string of lines "
-
-
-issue i am having is figuring out how to link the current level and the diffrent level buttons 
-I am thinking an if statement ( if easy clicked set level to easy ) or (on mouse click set current level to event ? )
-
-
-bug cant get animation to reset when correct answer is typed 
-
-fix .... dom reflow as advised by tutor supporrt ....?
-
-
-
-tuesday 1st of march bug 
-code to show alert that user has lost the game when time reches 0 wont go away because time is still ===0 
-
-fix ......     ......  ?
-
-
 
 # **Code Hero**
 
@@ -123,7 +98,7 @@ Live site: https://romcgill.github.io/coding-game/
 ![]insert image
 #### Frequent User Goals
 
--   As a Frequent User, I want there to be new code snipits for me to practice a more diverse range of code 
+-   As a Frequent User, I want there to be new code blocks for me to practice a more diverse range of code 
 
 -   As a Frequent User, I want to be able to change dificulty levels as my coding skills improve 
 
@@ -141,7 +116,7 @@ _____
 
 ## Typography
 
-sans-serif font is the main font used throughout the whole website, I have chose to use this font as it it web safe and stable on all devices and browsers. I have used the 
+fantasy and sans-serif font-familys are the main font used throughout the site, I have chose to use these  as they are web safe and stable on all devices and browsers. I have used the 
 (avatar font)
 Papyrus font in the Fantasy family. This font is easy to read and also Intresting and familiar to the user as it is a widley used font.
 
@@ -216,9 +191,9 @@ Example
 2.  The game is easy to navigate and understand 
 > " As a First Time Visitor, I want to easily understand the game and why I should be interested in it.
 ."
--   the game is uncomplicated as it gives you only one goal to achieve "type the line of code befor it reaches the bottom of the box" as the lines of code change randomly each time this also keeps the game fresh and exciting.
+-   the game is uncomplicated as it gives you only one goal to achieve "type the line of code before it reaches the bottom of the box" as the lines of code change randomly each time this also keeps the game fresh and exciting.
 
-Example (random lines of code with animation to have the line fall ) 
+Example (random lines of code  pulled from string)
 
 JS
 ```{r}. 
@@ -234,26 +209,7 @@ const lines =
     const randIndex = Math.floor(Math.random() * lines.length);
     currentLine.innerText = lines[randIndex];
 ```    
-CSS      
-```{r}.
- .linedown {
-    top: 0;
-    opacity: 0;
-    animation: new-item-animation 20s linear forwards;
-}
 
-@keyframes new-item-animation {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-}
-
-    to {
-        opacity: 1;
-        transform : translateY(400px);
-    }
-}
-```
 
 
 
@@ -290,60 +246,117 @@ CSS
 }
 ```
 
+4. Anticheat, I have added a feature that will not alow players to cheat by using copy and paste to get the correct answer in the box immediately. To stop this I added an event listener to listen for 'paste' in the text area, when paste is (heard) the event listenr will fire and add the text No Cheating! into the textarea. and also by using prevent default the user will be unable to paste into the text area afterwards 
+
+JS
+```{r}
+textInput.addEventListener(
+    'paste', (e) => {
+        e.preventDefault();
+        textInput.innerText = ("NO CHEATING !");
+        console.log("NO CHEATING !");
+```
+
+5. score board, I have added a score counter that keeps track of every time a user gets an answer correct. and increments by 1 each time, this score is then shown in the modal that is displayed when the user looses. When the modal is closed the score is reset back to 0.
+
+6. (linedown) animation, this feature is the heart and soul of the game, the animation is simple yet affective. It targets the random code block that is pulled from the string and drops it down the screen at a steady pace, this creates a sence of urgency and competitiveness for the user.
+
+JS
+```{r}
+restart.onclick = function(){
+    showLine(lines)
+    time=18;
+    displayScore();
+    currentLine.classList.remove("linedown");
+    void currentLine.offsetWidth; 
+    currentLine.classList.add("linedown");
+    focusTextarea()
+}
+```
+
+CSS
+```{r}
+.linedown {
+    top: 0;
+    opacity: 0;
+    animation: new-item-animation 20s linear forwards;
+    color: green;
+    background-color: rgba(138, 43, 226, 0.7);
+    border-radius: 25px;
+    box-shadow: 5px;
+}
+
+@keyframes new-item-animation {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+}
+
+    to {
+        opacity: 1;
+        transform : translateY(400px);
+    }
+}
+
+```
+
+HTML
+```{r}
+<div class="game-area">
+        <h3 id="current-phrase" class="linedown"></h3>
+```
+
+
 
 
 ------
 
 -----
 ## Features Still to be Added change these.
-1. dififculty levels, there are 2 ways I will go about doing this
+1. dififculty levels, there are 3 possibel ways I will go about doing this
 option 1. is to have the timer set a difffrent times depending on which button the user clicks for example : hard = 10 seconds easy = 30 seconds.
-option 2. is to change the size of the text area, aswell as the time i think I could do this with media queries exampe: if hard button clicked textarea = 10vh by 80 vw, this along with a shortend timer would make for a very seamless chnage in the dificulty of the game. 
+option 2. is to change the size of the text area, aswell as the time i think I could do this with media queries exampe: if hard button clicked textarea = 10vh by 80 vw, this along with a shortend timer would make for a very seamless chnage in the dificulty of the game. option 3 is to divide my string into 3 seperate strings easy medium and hard, with shorter lines of code in easy, long lines of code in hard and so on.The issue i will face here will be with my function that pulls the random line from the string.
+2. score board/local storage of score and email score to user 
 ------
 ## Testing change this 
 
 
- The site is written with only HTML and CSS my testing will be focused on accessibility,functionality and the visual asthetic.  
- 1. #### Accessability
- To test the accessibility of my site I carried out some manual testing using google dev tools, amiresponsive and different devices and screen sizes. One thing I was looking for was if my media queries were performing as expected. To achieve this I used dev tools to resize each page of the site in each test the media queries functions how I expected without fault.
+ The site is written with HTML, CSS and Java Script my testing will be focused on accessibility, functionality and the visual asthetic/.  
+ 1. #### Accessability/responsiveness
+ To test the accessibility of my site I carried out some manual testing using google dev tools, amiresponsive and different devices and screen sizes. my main objective was to ensure that my game was fully playable on all devices but paying more atention to devices with bigger screen sizes as these devices are primarly used with a keyboard which is highly advised when playing the game as the thumb typing on a phone or smaller device will leave the user at a big disadvantage. As I did not use media queries I could not test how my site reacts at exact screen sizes I had to manualy check them all by using chromes dev tools.(I used vh and vw units of measurement to achive responsivness on this site)
  2. #### Functionality
- - To test the functionality of the site I used a combination of manual testing and markup validators. Using the W3C markup validator the site had no errors or warnings to show on any page.
+ - To test the functionality of the site I used a combination of manual testing and markup validators. Using the W3C markup validator and the w3cssvalidator the site had no errors or warnings.
  ![markup validator](./assets/images/html-check.png)
- I generated a lighthouse report on dev tools and recieved 100 on accessibility, best practice and SEO and 78 on performance. This issue was soon fixed by resizing my images and using tinypng.com to compress each png file to make it a smaller file size for faster load times, I also received some advice on stack overflow to preload my hero image. Using these three methods I got the performance score up to 100. due to a function google has in active development I am no longer receiving 100 in best practice, the score is now at 93.
+ I generated a lighthouse report on dev tools and .... add here...
  ![lighthouse score](./assets/images/lighthouse-score.png)
  ![permission error](./assets/images/github-permissions-error.png)
  ![stack overflow response](./assets/images/stack-overflow-response.png)
- I am confident once google fixes this bug my site will achieve 100 in every category.
- I used the The W3C CSS Validation Service to test my CSS code, The result came back with no errors.
+
  ![css validator](./assets/images/css-validator.png)
  - Manual Testing. 
- To test the site manually I ensured that all links opened to the correct page and all of the pages in the nav bar lead to the correct destination. I have also made many submissions into the form to make sure that everything is functioning as it should, throughout the process of coding the website I was continuously testing every feature added and never left a feature that didnt work in the project until it was fully functional.
+ To test the site/game manually I played it many times and console loged my functions along the way to ensure they were being called when I wanted them. throughout the process of coding the website I was continuously testing every feature added and never left a feature that didnt work in the project until it was fully functional. I did this by commenting out code that did not work then uncommenting it as i was working on it.
 3. #### Visual aesthetic
- - I manually checked the colours on my site using colors.co, I did this because I felt that the contrast validators were not great at recognising where the colours are on the page. They try to contrast two colours that are not relevant to eachother. Using colors.co the contrast between the text and background received a score of 11.63 and 4 out of 5 stars.
+ - I manually checked the colours on my site using colors.co, I did this because I felt that the contrast validators were not great at recognising where the colours are on the page. They try to contrast two colours that are not relevant to eachother. 
  ![contrast check](./assets/images/contrast-check.png)
 ----
  ## Bugs/Fixes add current  
  
  1. monday 21st feb
-JS code to show random phrase from string is showing undefined instead of daata from the string (could be a simple spelling/syntax error)
-
-fix "simple syntax error I forgot to put = after const before string of lines "
+JS code to show random phrase from string is showing undefined instead of daata from the string (could be a simple spelling/syntax error).....fix "simple syntax error I forgot to put = after const before string of lines "
 
 
 issue i am having is figuring out how to link the current level and the diffrent level buttons 
 I am thinking an if statement ( if easy clicked set level to easy ) or (on mouse click set current level to event ? )
 
 
-bug cant get animation to reset when correct answer is typed 
-
-fix .... dom reflow, make animation void then call agin. as advised by tutor supporrt ....?
+bug cant get animation to reset when correct answer is typed fix .... dom reflow, make animation void then call agin. as advised by tutor supporrt ....?
 
 
 
 tuesday 1st of march bug 
 code to show alert that user has lost the game when time reches 0 wont go away because time is still ===0 
 
-fix ......  modal close on click function resets the time to the time set by the dififculty level (stadard time is 18 seconds before adding diffrent dificulty levels)
+fix ......  modal close on click function resets the time to ('') (stadard time is 18 seconds before adding diffrent dificulty levels)
 
 
 closeModal.onclick = function() {
@@ -353,13 +366,23 @@ closeModal.onclick = function() {
 
 
 
-issue with incorrect line of code staying in the text area when the game ends, this would make the user delet the code before typing in a new line which would ruin the flow of the game. the fix was the same as the timer in the last bug. on the modal close function I added  textInput.value=''; this will clear the text area and allow the game to start fresh after a user looses and tries to play again.
+issue with incorrect line of code staying in the text area when the game ends, this would make the user delet the code before typing in a new line which would ruin the flow of the game..... the fix was the same as the timer in the last bug. on the modal close function I added  textInput.value=''; this will clear the text area and allow the game to start fresh after a user looses and tries to play again.
 
 
 
 bug level select not working .. on click function to show hard easy or medium lines of code works byut does not set or stay with the option that is clicked. I need to set the level at the start then run the game ******
 
- 
+
+
+bug score counter not showing in the modal .... fix... the fix was a simple one, I was using document.getelementById to get the "score from the html and that was already being used by the score counter in the game so i had to change the index.html for the score to have a class instead of an Id and then use document.getElementByClassName and target the 1st element of my display score array for the game and the 2nd element of my display score for my modal. this resolved my issue  
+
+
+
+
+
+
+
+
 
 ------
 ## Deployment
