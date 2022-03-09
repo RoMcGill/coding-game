@@ -17,7 +17,7 @@ let restart = document.getElementById('btn');
 // score display
 let scoreDisplay = document.getElementById('score');
 // score
-let score = '';
+let score = 0;
 //easy medium hard buttons
 
 let easy = document.getElementById('easy-button')
@@ -27,7 +27,7 @@ let hard = document.getElementById('hard-button')
 
 // lines of code in string to be displayed by the show line function
 
-/*
+
 const lines =
 [
     '<h1>Heading</h1>',
@@ -50,8 +50,8 @@ const lines =
     '<link rel="stylesheet" href="assets/CSS/styles.css">',
     
 ];
-*/
 
+/*
 
 const easyLines =
 [
@@ -82,7 +82,7 @@ const hardLines =
     '<link rel="stylesheet" href="assets/CSS/styles.css">',
     
 ];
-
+*/
 
 //plays game
 function runGame(){
@@ -111,6 +111,7 @@ function timer() {
 } else if (time===0) {
       runGame = false;
       showModal();
+      
 }
     timeDisplay.innerHTML = time
     
@@ -119,7 +120,8 @@ function timer() {
 //show modal for when timer runs out
 function showModal(){
     
-     modalContainer.style.display='flex';  
+     modalContainer.style.display='flex';
+     displayScore  
 
 }
 // close modal on click
@@ -127,9 +129,13 @@ closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = ''
     textInput.value='';
+    score = 0;
+    
     
         
 }
+
+/*
 //dificulty select
 
 easy.onclick=function(){
@@ -144,11 +150,11 @@ hard.onclick=function(){
 
 
 
-
+*/
 
 // restart game on click of start button
 restart.onclick = function(){
-    showLine(easyLines)
+    showLine(lines)
     time=18;
     score = 0 + 1
     currentLine.classList.remove("linedown");
@@ -173,7 +179,7 @@ function checkInput(){
         message.innerText = 'Correct'
         displayScore()
         score +1;
-        showLine(easyLines);
+        showLine(lines);
         time=18;
         currentLine.classList.remove("linedown");
         void currentLine.offsetWidth; 
