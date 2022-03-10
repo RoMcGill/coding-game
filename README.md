@@ -8,7 +8,7 @@ Live site: https://romcgill.github.io/coding-game/
 
 -----
 
-![](assets/Images/amiresponsive-placeholder.png)
+![](assets/Images/amiresponsive-final.png)
 
 -----
 <details>
@@ -73,29 +73,27 @@ Live site: https://romcgill.github.io/coding-game/
 
 -   As a First Time Visitor, I want to easily understand the game and why I should be interested in it.
 
--   ![]
+-   ![about-info](assets/Images/intro.png)
 -   As a First Time Visitor, I want to be able to easily navigate to the game and find content that relates to my interests.
-
-![]
 
 
 -   As a First Time Visitor, I want to be excited, intrigued and feel I am in a fun environment where i can practice typing code.
 
-![]
+![landing-page](assets/Images/landing-page.png)
 
 #### Returning Visitor Goals
 
 -   As a Returning Visitor, I want to try and beat my previous scores.
 
-![] insert image
+![score](assets/Images/score.png)
 
 -   As a Returning Visitor, I want to feel as though I am not playiing the same game with the same content over and over again.
 
-![]insert image
+
 
 -   As a Returning Visitor, I want to better my skills and boost my confidence in writing HTML code.
 
-![]insert image
+
 #### Frequent User Goals
 
 -   As a Frequent User, I want there to be new code blocks for me to practice a more diverse range of code 
@@ -120,6 +118,8 @@ fantasy and sans-serif font-familys are the main font used throughout the site, 
 (avatar font)
 Papyrus font in the Fantasy family. This font is easy to read and also Intresting and familiar to the user as it is a widley used font.
 
+![heading](assets/Images/heading.png)
+
 ```r
 .body{
     font-family: sans-serif;
@@ -138,9 +138,13 @@ Papyrus font in the Fantasy family. This font is easy to read and also Intrestin
 
 
 
-![]insert image
+![retro-gaming](assets/Images/retro-gaming.png)
+![movie-hacking](assets/Images/movie-hacking)
+
 
 When the site is viewed on a mobile device it will function as supposed to as it is fully responsive on all devices. but the player will be at a disadvantage as thumb typing is not very efficient for typing HTML code.
+![mobile-portrait](assets/Images/portrait.png)
+![mobile-landscape](assets/Images/landscape.png)
 
 
 
@@ -173,7 +177,7 @@ ____
 
 
 ### Existing Features
-1. The design of the game is fully responsive on all modern devices.
+#### 1. The design of the game is fully responsive on all modern devices.
 > " As a Frequent User I want to play the game on my phone while I am away from my desk."
 - The Game uses vh and vw units of measurement when setting the sizes of every element. this is to ensure that every screen size is catered for.
 
@@ -184,11 +188,11 @@ Example
     width: 90vw;
     height: 40vh;
 ```
-![screenshot of landing page on iphone](./assets/images/screenshot-of-landing-page-on-mobile.png)
+![screenshot of landing page on iphone](./assets/images/portrait)
 
 -----------
 
-2.  The game is easy to navigate and understand 
+#### 2. The game is easy to navigate and understand 
 > " As a First Time Visitor, I want to easily understand the game and why I should be interested in it.
 ."
 -   the game is uncomplicated as it gives you only one goal to achieve "type the line of code before it reaches the bottom of the box" as the lines of code change randomly each time this also keeps the game fresh and exciting.
@@ -215,7 +219,8 @@ const lines =
 
 ------
 
-3. for the text area i used focus so that when a correct answer is typed or the game begins the area is ready for input. the text area also turns green when the correct answer is entered and is stays yellow when the current text does not match the current line of code.
+#### 3. Focus the text area
+for the text area i used focus so that when a correct answer is typed or the game begins the area is ready for input. the text area also turns green when the correct answer is entered and is stays yellow when the current text does not match the current line of code.
 
 JS
 ```{r}. 
@@ -246,7 +251,9 @@ CSS
 }
 ```
 
-4. Anticheat, I have added a feature that will not alow players to cheat by using copy and paste to get the correct answer in the box immediately. To stop this I added an event listener to listen for 'paste' in the text area, when paste is (heard) the event listenr will fire and add the text No Cheating! into the textarea. and also by using prevent default the user will be unable to paste into the text area afterwards 
+#### 4. Anticheat, 
+I have added a feature that will not alow players to cheat by using copy and paste to get the correct answer in the box immediately. To stop this I added an event listener to listen for 'paste' in the text area, when paste is (heard) the event listenr will fire and add the text No Cheating! into the textarea. and also by using prevent default the user will be unable to paste into the text area afterwards 
+![anticheat](assets/Images/no-cheating.png)
 
 JS
 ```{r}
@@ -257,9 +264,12 @@ textInput.addEventListener(
         console.log("NO CHEATING !");
 ```
 
-5. score board, I have added a score counter that keeps track of every time a user gets an answer correct. and increments by 1 each time, this score is then shown in the modal that is displayed when the user looses. When the modal is closed the score is reset back to 0.
+#### 5. score counter, 
+I have added a score counter that keeps track of every time a user gets an answer correct. and increments by 1 each time, this score is then shown in the modal that is displayed when the user looses. When the modal is closed the score is reset back to 0.
+![score](assets/Images/score.png)
 
-6. (linedown) animation, this feature is the heart and soul of the game, the animation is simple yet affective. It targets the random code block that is pulled from the string and drops it down the screen at a steady pace, this creates a sence of urgency and competitiveness for the user.
+#### 6. (linedown) animation,
+ this feature is the heart and soul of the game, the animation is simple yet affective. It targets the random code block that is pulled from the string and drops it down the screen at a steady pace, this creates a sence of urgency and competitiveness for the user.
 
 JS
 ```{r}
@@ -306,14 +316,24 @@ HTML
         <h3 id="current-phrase" class="linedown"></h3>
 ```
 
+#### 7. Game Over modal, 
+this feature is a modal that apears when the timer hits 0. this means the player did not type out the codeblock in time and therefore losses the game. when the modal apears it will show the text Game over and show the players score, if the player wishes to play again they can close the modal with the close button and click play
+![game-over-modal](assets/Images/game-over-modal.png)
 
+#### 8. Dificulty select,
+ at the top of the page under the heading there are 3 "buttons" to choose easy medium or hard, theese buttons will load easy,medium or hard words into the game, this makes the game accesable to all players no matter there skill level or experience.
+ ![difficulty-select](assets/Images/score.png)
+
+#### 9. text area background colour,
+ the background colour of the text area changes to green if the input matches the code block, if not the background remains a shade of yellow to visualy tell the player there input is not correct. this is a non intrusive subtle way of informing the player of how they are doing without distracting them.
+![bg-color](assets/Images/correct-background.png)
+![bg-color-incorrect](assets/Images/incorrect-background.png.png)
 
 
 ------
 
 -----
 ## Features Still to be Added change these.
-1.
 2. score board/local storage of score and email score to user 
 ------
 ## Testing change this 
@@ -324,68 +344,86 @@ HTML
  To test the accessibility of my site I carried out some manual testing using google dev tools, amiresponsive and different devices and screen sizes. my main objective was to ensure that my game was fully playable on all devices but paying more atention to devices with bigger screen sizes as these devices are primarly used with a keyboard which is highly advised when playing the game as the thumb typing on a phone or smaller device will leave the user at a big disadvantage. As I did not use media queries I could not test how my site reacts at exact screen sizes I had to manualy check them all by using chromes dev tools.(I used vh and vw units of measurement to achive responsivness on this site)
  2. #### Functionality
  - To test the functionality of the site I used a combination of manual testing and markup validators. Using the W3C markup validator and the w3cssvalidator the site had no errors or warnings.
- ![markup validator](./assets/images/html-check.png)
- I generated a lighthouse report on dev tools and .... add here...
- ![lighthouse score](./assets/images/lighthouse-score.png)
- ![permission error](./assets/images/github-permissions-error.png)
- ![stack overflow response](./assets/images/stack-overflow-response.png)
+ ![markup validator]()
 
- ![css validator](./assets/images/css-validator.png)
+ 
+ I generated a lighthouse report on dev tools
+ ![lighthouse score]()
+
+ ![css validator]()
  - Manual Testing. 
  To test the site/game manually I played it many times and console loged my functions along the way to ensure they were being called when I wanted them. throughout the process of coding the website I was continuously testing every feature added and never left a feature that didnt work in the project until it was fully functional. I did this by commenting out code that did not work then uncommenting it as i was working on it.
 3. #### Visual aesthetic
  - I manually checked the colours on my site using colors.co, I did this because I felt that the contrast validators were not great at recognising where the colours are on the page. They try to contrast two colours that are not relevant to eachother. 
  ![contrast check](./assets/images/contrast-check.png)
 ----
- ## Bugs/Fixes add current  
+ ## Bugs/Fixes
  
- 1. monday 21st feb
-JS code to show random phrase from string is showing undefined instead of daata from the string (could be a simple spelling/syntax error).....fix "simple syntax error I forgot to put = after const before string of lines "
+### 1. monday 21st feb
+
+function to show random code block from string is showing undefined instead of code block from the string. first toughts is it could be a simple spelling/syntax error)
+### Fix
+ sytax error, missing = in ```const = lines[]```
 
 
- bug. adding dififculty levels, there are 3 possibel ways I will go about doing this
+ ### 2. adding dififculty levels,
+my first toughts there are 3 possibel ways I will go about doing this
 option 1. is to have the timer set a difffrent times depending on which button the user clicks for example : hard = 10 seconds easy = 30 seconds.
-option 2. is to change the size of the text area, aswell as the time i think I could do this with media queries exampe: if hard button clicked textarea = 10vh by 80 vw, this along with a shortend timer would make for a very seamless chnage in the dificulty of the game. option 3 is to divide my string into 3 seperate strings easy medium and hard, with shorter lines of code in easy, long lines of code in hard and so on.The issue i will face here will be with my function that pulls the random line from the string. I have solved this bug, by using none of the above methods, The method I used was to duplicate my JS and index.html file twice and link the index files to their own js files. inside thes js files i changed the sting with the code blocks to only have short lines of code for the js file linked to easy, medium lenght blocks for medium and long lenght blocks for hard I then added hrefs to the top of the page with css styling to make which ever page you are on the background color of the href would be green. the method I used functions as buttons to click and selelct you dificulty before playing the game 
+option 2. is to change the size of the text area, aswell as the time i think I could do this with media queries exampe: if hard button clicked textarea = 10vh by 80 vw, this along with a shortend timer would make for a very seamless chnage in the dificulty of the game. option 3 is to divide my string into 3 seperate strings easy medium and hard, with shorter lines of code in easy, long lines of code in hard and so on.The issue i will face here will be with my function that pulls the random line from the string. 
+
+### Fix
+I have solved this bug, by using none of the above methods, The method I used was to duplicate my JS and index.html file twice and link the index files to their own js files. inside thes js files i changed the string with the code blocks to only have short code blocks for the js file linked to easy, medium lenght blocks for medium and long lenght blocks for hard I then added hrefs to the top of each page with css styling to make which ever page you are on the background color of the href would be green. the method I used functions as buttons to click and selelct you dificulty before playing the game.
 
 
-bug cant get animation to reset when correct answer is typed fix .... dom reflow, make animation void then call agin. as advised by tutor supporrt ....?
+### 3. cant get animation to reset when correct answer is typed into text area
+
+### Fix
+ as adviced by tutor support i created a dom reflow and made the animation void when the answer was correct then my function to start the animation is called again
 
 
 
-tuesday 1st of march bug 
-code to show alert that user has lost the game when time reches 0 wont go away because time is still ===0 
+### tuesday 1st of march bug 
+### 4. code to show alert that user has lost the game when time reches 0 wont go away because time is still === 0 
 
-fix ......  modal close on click function resets the time to ('') (stadard time is 18 seconds before adding diffrent dificulty levels)
-
+### Fix
+ to fix this and improve upon it i created a modal to display when a player has lost the game (time == 0) I then added a function that is called when the close button on the modal is clicked. this function resets the time and current codeblock.
+```{r}
 
 closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = ''
     textInput.value='';     ......  ?
 
-
-
-issue with incorrect line of code staying in the text area when the game ends, this would make the user delet the code before typing in a new line which would ruin the flow of the game..... the fix was the same as the timer in the last bug. on the modal close function I added  textInput.value=''; this will clear the text area and allow the game to start fresh after a user looses and tries to play again.
-
-
-
-bug level select not working .. on click function to show hard easy or medium lines of code works byut does not set or stay with the option that is clicked. I need to set the level at the start then run the game ******
+```
 
 
 
-bug score counter not showing in the modal .... fix... the fix was a simple one, I was using document.getelementById to get the "score from the html and that was already being used by the score counter in the game so i had to change the index.html for the score to have a class instead of an Id and then use document.getElementByClassName and target the 1st element of my display score array for the game and the 2nd element of my display score for my modal. this resolved my issue  
+### 5. issue with incorrect line of code staying in the text area when the game ends,
+this would make the user delete the code before typing in a new line which would ruin the flow of the game.
+
+### Fix
+ this fix was similar to how i managed to fix the last bug, in the modal close function I added textInput.value=''; this will clear the text area and allow the game to start fresh after a user looses and tries to play again.
+
+
+### 6. score counter not showing in the modal.
+### Fix
+this bug was caused by my lack of future proofing my code, I was using document.getelementById to get the "score from the html and that was already being used by the score counter in the game so i had to change the index.html for the score to have a class instead of an Id and then use document.getElementByClassName and target the 1st element of my display score array for the game and the 2nd element of my display score for my modal. this resolved my issue  
 
 
 
-bug heading was droping down onto new line covering the buttons at small screen sizes ...... fix...... added a media query and white space no rap to the heading tag in css    white-space: nowrap;
+### 7. heading was spliting into 2 lines and droping down onto new line covering the buttons at small screen sizes.
+
+### Fix
+to fix this I added a media query and a white space no rap to the heading tag in css   
+```{r}
+ white-space: nowrap;
 }
 @media only screen and (max-width: 352px) {
     .heading { 
         font-size: 20pt;
     }
 }
-
-
+```
 
 
 
@@ -485,13 +523,13 @@ This was my IDE and where I wrote all of my code, Made commits and pushed to Git
 
 - I would like to thank my Code Institute mentor Antonio Rodriguez for all of his help, tips and feedback. 
 - My Cohort facilitator Kasia for all of her help and encouragement throughout the project.
-- WEB CIFAR on youtube for a great video on how to set up formspree
+- 
 - The stackoverflow community for responding to questions and having built up a massive database of invaluable tips,tricks and bug fixes
-- https://medium.com/ for teaching the bounce animation in a clear way
-- W3schools.com for easy to follow lessons on Grid and Flex
-- Kevin Powell on youtube for all of his Css tips and tricks.
+- 
+- W3schools.com for easy to follow lessons
+- 
 - Fellow students at Code Institute for answering all of my questions.
-- Peter Szabo for his attention to detail and great feedback.
+- 
 - Code Institute for supplying an amazing course, from the content to the staff and alumni. 
 
 
