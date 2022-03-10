@@ -31,7 +31,6 @@ Live site: https://romcgill.github.io/coding-game/
     + [Contribute Page Wireframe](#contribute-page-wireframe)
     + [Contribute page wireframe mobile](#contribute-page-wireframe-mobile)
 * [Features](#features)
-    + [* New Feature *](#--new-feature--)
     + [Existing Features](#existing-features)
   * [Features still to be added.](#features-still-to-be-added)
 * [Testing](#testing)
