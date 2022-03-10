@@ -17,10 +17,18 @@ body{
     height: 10vh;
     text-align: center;
     padding-top: 10px;
-    font-family: Fantasy;
+    font-family: Fantasy, sans-serif;
+    font: Papyrus;
     font-size: 25pt;
     font-weight: bolder;
+    white-space: nowrap;
 }
+@media only screen and (max-width: 352px) {
+    .heading { 
+        font-size: 20pt;
+    }
+}
+
 .about-section-container{
     width: 90vw;
     height: 20vh;
@@ -174,4 +182,24 @@ button{
 }
 .btn-green{
     background-color: green;
+    border: 0;
+    border-radius: 10px;
+    color: aquamarine;
+    font-size: 14px;
+    padding: 10px 25px;
+    pointer-events: all;
+    cursor: pointer;
+}
+.btn{
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 10px;
+    color: aquamarine;
+    font-size: 14px;
+    padding: 10px 25px;
+    pointer-events: all;
+    cursor: pointer;
+}
+.scoreboard{
+    padding-top: 30px;
 }
