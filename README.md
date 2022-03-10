@@ -151,7 +151,7 @@ When the site is viewed on a mobile device it will function as supposed to as it
 #  Wireframes
 ### Desktop Wireframe for correct answer
 
-![](assets/Images/wireframe-answer-correct-desktop.png)
+![](assets/Images/wireframe-small-desktop-correct-answer.png)
 
 ### Desktop Wireframe for incorrect answer
 
@@ -188,7 +188,7 @@ Example
     width: 90vw;
     height: 40vh;
 ```
-![screenshot of landing page on iphone](./assets/images/portrait)
+![screenshot of landing page on iphone](./assets/images/portrait.png)
 
 -----------
 
@@ -253,7 +253,10 @@ CSS
 
 #### 4. Anticheat, 
 I have added a feature that will not alow players to cheat by using copy and paste to get the correct answer in the box immediately. To stop this I added an event listener to listen for 'paste' in the text area, when paste is (heard) the event listenr will fire and add the text No Cheating! into the textarea. and also by using prevent default the user will be unable to paste into the text area afterwards 
+
+
 ![anticheat](assets/Images/no-cheating.png)
+
 
 JS
 ```{r}
@@ -266,6 +269,7 @@ textInput.addEventListener(
 
 #### 5. score counter, 
 I have added a score counter that keeps track of every time a user gets an answer correct. and increments by 1 each time, this score is then shown in the modal that is displayed when the user looses. When the modal is closed the score is reset back to 0.
+
 ![score](assets/Images/score.png)
 
 #### 6. (linedown) animation,
@@ -322,12 +326,14 @@ this feature is a modal that apears when the timer hits 0. this means the player
 
 #### 8. Dificulty select,
  at the top of the page under the heading there are 3 "buttons" to choose easy medium or hard, theese buttons will load easy,medium or hard words into the game, this makes the game accesable to all players no matter there skill level or experience.
+
  ![difficulty-select](assets/Images/score.png)
 
 #### 9. text area background colour,
  the background colour of the text area changes to green if the input matches the code block, if not the background remains a shade of yellow to visualy tell the player there input is not correct. this is a non intrusive subtle way of informing the player of how they are doing without distracting them.
+
 ![bg-color](assets/Images/correct-background.png)
-![bg-color-incorrect](assets/Images/incorrect-background.png.png)
+![bg-color-incorrect](assets/Images/incorrect-background.png)
 
 
 ------
