@@ -21,16 +21,17 @@ let score = 0;
 
 //  of code in string to be displayed by the show line function
 
-const easy  =
+const lines  =
 [
-    '<h1>Heading</h1>',
-    '<p>Paragraph</p>',
-    '<h1>big title</h1>',
-    '<h5>small title</h5>',
-    '<button>Filter</button>',
-    '<span>this is a span</span>',
-   
-    
+    '<div id="call">call div</div>',
+    '<article> this is an article </article>',
+    '<section class="hero-border">',
+    '<div class="about-section"></div>',
+    '<button id = "open">open</button>',
+    '<ol><li>list item 1</li></ol>',
+    '<input type="checkbox" id="checkbox">',
+    '<label for="checkbox">Slider</label>',
+ 
 ];
 
 /*
@@ -84,9 +85,9 @@ function runGame(){
        
 }
 // gets random item from string
-function showLine(easy){
-    const randIndex = Math.floor(Math.random() * easy.length);
-    currentLine.innerText = easy[randIndex];
+function showLine(lines){
+    const randIndex = Math.floor(Math.random() * lines.length);
+    currentLine.innerText = lines[randIndex];
 }
 /*
 function showLine(){
@@ -143,7 +144,7 @@ closeModal.onclick = function() {
 
 // restart game on click of start button
 restart.onclick = function(){
-    showLine(easy)
+    showLine(lines)
     time=18;
     displayScore();
     currentLine.classList.remove("linedown");
@@ -168,7 +169,7 @@ function checkInput(){
         message.innerText = 'Correct'
         displayScore()
         score ++
-        showLine(easy);
+        showLine(lines);
         time=18;
         currentLine.classList.remove("linedown");
         void currentLine.offsetWidth; 
