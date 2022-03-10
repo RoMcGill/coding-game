@@ -139,7 +139,7 @@ Papyrus font in the Fantasy family. This font is easy to read and also Intrestin
 
 
 ![retro-gaming](assets/Images/retro-gaming.png)
-![movie-hacking](assets/Images/movie-hacking)
+![movie-hacking](assets/Images/movie-hacking.png)
 
 
 When the site is viewed on a mobile device it will function as supposed to as it is fully responsive on all devices. but the player will be at a disadvantage as thumb typing is not very efficient for typing HTML code.
@@ -346,7 +346,7 @@ this feature is a modal that apears when the timer hits 0. this means the player
  - To test the functionality of the site I used a combination of manual testing and markup validators. Using the W3C markup validator and the w3cssvalidator the site had no errors or warnings.
  ![markup validator]()
 
- 
+
  I generated a lighthouse report on dev tools
  ![lighthouse score]()
 
