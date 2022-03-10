@@ -107,9 +107,9 @@ body{
     top: 0;
     opacity: 0;
     animation: new-item-animation 20s linear forwards;
-    color: green;
-    background-color: rgba(138, 43, 226, 0.7);
+    color: whitesmoke;
     border-radius: 25px;
+    
 }
 
 @keyframes new-item-animation {
@@ -212,4 +212,7 @@ button{
     .game-play-area{
         margin-top: 5px;
     }
+}
+.copyright{
+    color: white;
 }

@@ -33,6 +33,7 @@ const hard  =
     '<img src="./assets/images/hero.jpg" alt="hero image">',
     '<link rel="stylesheet" href="assets/CSS/styles.css">',
     
+    
 ];
 
 /*
@@ -137,7 +138,7 @@ closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = '';
     textInput.value='';
-    score = 0;
+    
     
     
         
@@ -147,6 +148,7 @@ closeModal.onclick = function() {
 restart.onclick = function(){
     showLine(hard);
     time=18;
+    score=0;
     displayScore();
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
@@ -168,8 +170,8 @@ function checkInput(){
     if (textInput.value === currentLine.innerText){
         setInterval(checkStatus, 50);
         message.innerText = 'Correct';
-        displayScore();
         score ++;
+        displayScore();
         showLine(hard);
         time=18;
         currentLine.classList.remove("linedown");

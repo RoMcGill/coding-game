@@ -114,9 +114,9 @@ _____
 
 ## Typography
 
-fantasy and sans-serif font-familys are the main font used throughout the site, I have chose to use these  as they are web safe and stable on all devices and browsers. I have used the 
-(avatar font)
-Papyrus font in the Fantasy family. This font is easy to read and also Intresting and familiar to the user as it is a widley used font.
+Fantasy and sans-serif font-familys are the main font used throughout the site, I have chose to use these  as they are web safe and stable on all devices and browsers.
+the standard font in the Fantasy family is papyrus (the avatar font)
+. This font is easy to read and also Intresting and familiar to the user as it is widley used.
 
 ![heading](assets/Images/heading.png)
 
@@ -134,7 +134,7 @@ Papyrus font in the Fantasy family. This font is easy to read and also Intrestin
 
 
 
--The imagery (look and feel) used was done to create a sense of retro Gaming and old school " Hacking " link in the movies 
+-The imagery used was purposefully done to create a sense of nostalgia with a theme of retro Gaming and old school " Hacking " like in the movies  
 
 
 
@@ -142,7 +142,7 @@ Papyrus font in the Fantasy family. This font is easy to read and also Intrestin
 ![movie-hacking](assets/Images/movie-hacking.png)
 
 
-When the site is viewed on a mobile device it will function as supposed to as it is fully responsive on all devices. but the player will be at a disadvantage as thumb typing is not very efficient for typing HTML code.
+When the site is viewed on a mobile device it will function as it is supposed to, As it is fully responsive on all devices. but the player will be at a disadvantage as thumb typing is not very efficient for typing HTML code.
 ![mobile-portrait](assets/Images/portrait.png)
 ![mobile-landscape](assets/Images/landscape.png)
 
@@ -169,17 +169,14 @@ When the site is viewed on a mobile device it will function as supposed to as it
 
 ![](assets/Images/mobile-wireframe-wrong-answer.png)
 ## Features
-____
-### * New Feature *
-
-
-
-
-
+-------
 ### Existing Features
 #### 1. The design of the game is fully responsive on all modern devices.
 > " As a Frequent User I want to play the game on my phone while I am away from my desk."
-- The Game uses vh and vw units of measurement when setting the sizes of every element. this is to ensure that every screen size is catered for.
+- The Game uses vh and vw units of measurement when setting the sizes of every element. this is to ensure that every screen size is catered for. In the case of some smaller screen sizes I used media queries to and more padding to the heading and changed the font size as I did not want text that would cover eachother.
+
+I also added a media query that adjusts some of the padding for the game play area and the button container when a device is orientated to landscape.
+
 
 Example
 ```
@@ -187,6 +184,15 @@ Example
   
     width: 90vw;
     height: 40vh;
+}
+    @media screen and (orientation:landscape) {
+    .btn-container{
+        padding-top: 50px;
+    }
+    .game-play-area{
+        margin-top: 5px;
+    }
+}
 ```
 ![screenshot of landing page on iphone](./assets/images/portrait.png)
 
@@ -220,7 +226,7 @@ const lines =
 ------
 
 #### 3. Focus the text area
-for the text area i used focus so that when a correct answer is typed or the game begins the area is ready for input. the text area also turns green when the correct answer is entered and is stays yellow when the current text does not match the current line of code.
+for the text area i used focus so that when an answer is typed or the game begins the area is ready for input, This means the player does not have to click into the text area every time they want to type an answer. the text area also turns green when the correct answer is entered and is stays yellow when the current text does not match the current line of code.
 
 JS
 ```{r}. 
@@ -252,7 +258,7 @@ CSS
 ```
 
 #### 4. Anticheat, 
-I have added a feature that will not alow players to cheat by using copy and paste to get the correct answer in the box immediately. To stop this I added an event listener to listen for 'paste' in the text area, when paste is (heard) the event listenr will fire and add the text No Cheating! into the textarea. and also by using prevent default the user will be unable to paste into the text area afterwards 
+I have added a feature that will not allow players to cheat by using copy and paste to get the correct answer in the box immediately. To stop this I added an event listener to listen for 'paste' in the text area, when paste is (heard) the event listenr will fire and add the text No Cheating! into the textarea. and also by using prevent default the user will be unable to paste into the text area afterwards 
 
 
 ![anticheat](assets/Images/no-cheating.png)
@@ -339,15 +345,15 @@ this feature is a modal that apears when the timer hits 0. this means the player
 ------
 
 -----
-## Features Still to be Added change these.
+## Features Still to be Added.
 2. score board/local storage of score and email score to user 
 ------
-## Testing change this 
+## Testing
 
 
  The site is written with HTML, CSS and Java Script my testing will be focused on accessibility, functionality and the visual asthetic/.  
  1. #### Accessability/responsiveness
- To test the accessibility of my site I carried out some manual testing using google dev tools, amiresponsive and different devices and screen sizes. my main objective was to ensure that my game was fully playable on all devices but paying more atention to devices with bigger screen sizes as these devices are primarly used with a keyboard which is highly advised when playing the game as the thumb typing on a phone or smaller device will leave the user at a big disadvantage. As I did not use media queries I could not test how my site reacts at exact screen sizes I had to manualy check them all by using chromes dev tools.(I used vh and vw units of measurement to achive responsivness on this site)
+ To test the accessibility of my site I carried out some manual testing using google dev tools, amiresponsive and different devices and screen sizes. my main objective was to ensure that my game was fully playable on all devices but paying more atention to devices with bigger screen sizes as these devices are primarly used with a keyboard which is highly advised when playing the game as thumb typing on a phone or smaller device will leave the user at a big disadvantage.I also manualy checked all sizes by using chromes dev tools.(I used vh and vw units of measurement to achive responsivness on this site)
  2. #### Functionality
  - To test the functionality of the site I used a combination of manual testing and markup validators. Using the W3C markup validator and the w3cssvalidator the site had no errors or warnings.
  ![markup validator]()
