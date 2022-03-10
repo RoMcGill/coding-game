@@ -194,7 +194,7 @@ Example
     }
 }
 ```
-![screenshot of landing page on iphone](./assets/images/portrait.png)
+![screenshot of landing page on iphone](assets/images/portrait.png)
 
 -----------
 
