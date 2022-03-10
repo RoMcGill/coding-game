@@ -1,11 +1,11 @@
-window.addEventListener('load',runGame)
+window.addEventListener('load',runGame);
 // text area = textinput
 const textInput = document.querySelector('#text-input');
 // line of code
 const currentLine = document.querySelector('#current-phrase');
 // timer
 const timeDisplay = document.querySelector('#time');
-let time = ''
+let time = '';
 // messege for game over
 const message = document.querySelector('#message');
 // modal container
@@ -121,7 +121,7 @@ function timer() {
       showModal();
       
 }
-    timeDisplay.innerHTML = time
+    timeDisplay.innerHTML = time;
     
 }
 
@@ -135,24 +135,24 @@ function showModal(){
 // close modal on click
 closeModal.onclick = function() {
     modalContainer.style.display='none';
-    time = ''
+    time = '';
     textInput.value='';
     score = 0;
     
     
         
-}
+};
 
 // restart game on click of start button
 restart.onclick = function(){
-    showLine(hard)
+    showLine(hard);
     time=18;
     displayScore();
     currentLine.classList.remove("linedown");
     void currentLine.offsetWidth; 
     currentLine.classList.add("linedown");
-    focusTextarea()
-}
+    focusTextarea();
+};
 
 
 
@@ -166,21 +166,21 @@ function checkStatus(){
 
 function checkInput(){
     if (textInput.value === currentLine.innerText){
-        setInterval(checkStatus, 50)
-        message.innerText = 'Correct'
-        displayScore()
-        score ++
+        setInterval(checkStatus, 50);
+        message.innerText = 'Correct';
+        displayScore();
+        score ++;
         showLine(hard);
         time=18;
         currentLine.classList.remove("linedown");
         void currentLine.offsetWidth; 
         currentLine.classList.add("linedown");
         textInput.value='';
-        textInput.classList.add('correct-background')
+        textInput.classList.add('correct-background');
        
     }else{
-        textInput.classList.remove('correct-background')
-        message.innerText = ''
+        textInput.classList.remove('correct-background');
+        message.innerText = '';
 
     }
     
@@ -205,7 +205,7 @@ textInput.addEventListener(
     
 
     }
-)
+);
 
 
 
