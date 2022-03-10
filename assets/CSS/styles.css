@@ -207,3 +207,11 @@ button{
 .scoreboard{
     padding-top: 30px;
 }
+@media screen and (orientation:landscape) {
+    .btn-container{
+        padding-top: 50px;
+    }
+    .game-play-area{
+        margin-top: 5px;
+    }
+}
