@@ -313,9 +313,7 @@ HTML
 
 -----
 ## Features Still to be Added change these.
-1. dififculty levels, there are 3 possibel ways I will go about doing this
-option 1. is to have the timer set a difffrent times depending on which button the user clicks for example : hard = 10 seconds easy = 30 seconds.
-option 2. is to change the size of the text area, aswell as the time i think I could do this with media queries exampe: if hard button clicked textarea = 10vh by 80 vw, this along with a shortend timer would make for a very seamless chnage in the dificulty of the game. option 3 is to divide my string into 3 seperate strings easy medium and hard, with shorter lines of code in easy, long lines of code in hard and so on.The issue i will face here will be with my function that pulls the random line from the string.
+1.
 2. score board/local storage of score and email score to user 
 ------
 ## Testing change this 
@@ -345,8 +343,9 @@ option 2. is to change the size of the text area, aswell as the time i think I c
 JS code to show random phrase from string is showing undefined instead of daata from the string (could be a simple spelling/syntax error).....fix "simple syntax error I forgot to put = after const before string of lines "
 
 
-issue i am having is figuring out how to link the current level and the diffrent level buttons 
-I am thinking an if statement ( if easy clicked set level to easy ) or (on mouse click set current level to event ? )
+ bug. adding dififculty levels, there are 3 possibel ways I will go about doing this
+option 1. is to have the timer set a difffrent times depending on which button the user clicks for example : hard = 10 seconds easy = 30 seconds.
+option 2. is to change the size of the text area, aswell as the time i think I could do this with media queries exampe: if hard button clicked textarea = 10vh by 80 vw, this along with a shortend timer would make for a very seamless chnage in the dificulty of the game. option 3 is to divide my string into 3 seperate strings easy medium and hard, with shorter lines of code in easy, long lines of code in hard and so on.The issue i will face here will be with my function that pulls the random line from the string. I have solved this bug, by using none of the above methods, The method I used was to duplicate my JS and index.html file twice and link the index files to their own js files. inside thes js files i changed the sting with the code blocks to only have short lines of code for the js file linked to easy, medium lenght blocks for medium and long lenght blocks for hard I then added hrefs to the top of the page with css styling to make which ever page you are on the background color of the href would be green. the method I used functions as buttons to click and selelct you dificulty before playing the game 
 
 
 bug cant get animation to reset when correct answer is typed fix .... dom reflow, make animation void then call agin. as advised by tutor supporrt ....?
@@ -378,7 +377,13 @@ bug score counter not showing in the modal .... fix... the fix was a simple one,
 
 
 
-
+bug heading was droping down onto new line covering the buttons at small screen sizes ...... fix...... added a media query and white space no rap to the heading tag in css    white-space: nowrap;
+}
+@media only screen and (max-width: 352px) {
+    .heading { 
+        font-size: 20pt;
+    }
+}
 
 
 

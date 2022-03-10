@@ -26,6 +26,7 @@ body{
 @media only screen and (max-width: 352px) {
     .heading { 
         font-size: 20pt;
+        padding-bottom: 20px;
     }
 }
 
