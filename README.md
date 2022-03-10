@@ -194,7 +194,7 @@ Example
     }
 }
 ```
-![screenshot of landing page on iphone](assets/images/portrait.png)
+
 
 -----------
 
@@ -353,19 +353,22 @@ this feature is a modal that apears when the timer hits 0. this means the player
 
  The site is written with HTML, CSS and Java Script my testing will be focused on accessibility, functionality and the visual asthetic/.  
  1. #### Accessability/responsiveness
- To test the accessibility of my site I carried out some manual testing using google dev tools, amiresponsive and different devices and screen sizes. my main objective was to ensure that my game was fully playable on all devices but paying more atention to devices with bigger screen sizes as these devices are primarly used with a keyboard which is highly advised when playing the game as thumb typing on a phone or smaller device will leave the user at a big disadvantage.I also manualy checked all sizes by using chromes dev tools.(I used vh and vw units of measurement to achive responsivness on this site)
+ To test the accessibility of my site I carried out some manual testing using google dev tools, amiresponsive and different devices and screen sizes. my main objective was to ensure that my game was fully playable on all devices. While paying more atention to devices with bigger screen sizes as these devices are primarly used with a keyboard which is highly advised when playing the game as thumb typing on a phone or smaller device will leave the user at a big disadvantage.I also manualy checked all sizes by using chromes dev tools.(I used vh and vw units of measurement to achive responsivness on this site)
  2. #### Functionality
- - To test the functionality of the site I used a combination of manual testing and markup validators. Using the W3C markup validator and the w3cssvalidator the site had no errors and one warning, this warning was caused by my function that gets a random code block from a string. this code block is then displayed in this h3 element.
+ - To test the functionality of the site I used a combination of manual testing and markup validators on all pages of my site. Using the W3C markup validator and the w3cssvalidator the site had no errors and one warning, this warning was caused by my function that gets a random code block from a string. this code block is displayed in this empty h3 element.
  i also tested my Java Script code on jshint.com where the code recieved one warning.
- ![js validator](assets/Images/jshint.png)
+
  ![markup validator](assets/Images/html-validation.png)
 
+ ![js validator](assets/Images/jshint.png)
+
+ ![css validator](assets/Images/css-validation.png)
 
  I generated a lighthouse report on dev tools
  and recived 100 on everything apart from accesability, this was down to a few style choices I have made and believe they are right for the game.
  ![lighthouse score](assets/Images/lighthouse.png)
 
- ![css validator](assets/Images/css-validation.png)
+ 
  - Manual Testing. 
  To test the site/game manually I played it many times and console loged my functions along the way to ensure they were being called when I wanted them. throughout the process of coding the website I was continuously testing every feature added and never left a feature that didnt work in the project until it was fully functional. I did this by commenting out code that did not work then uncommenting it as i was working on it.
 3. #### Visual aesthetic
@@ -382,12 +385,12 @@ function to show random code block from string is showing undefined instead of c
 
 
  ### 2. adding dififculty levels,
-my first toughts there are 3 possibel ways I will go about doing this
+my first thoughts were that there are 3 possibel ways I could go about doing this
 option 1. is to have the timer set a difffrent times depending on which button the user clicks for example : hard = 10 seconds easy = 30 seconds.
-option 2. is to change the size of the text area, aswell as the time i think I could do this with media queries exampe: if hard button clicked textarea = 10vh by 80 vw, this along with a shortend timer would make for a very seamless chnage in the dificulty of the game. option 3 is to divide my string into 3 seperate strings easy medium and hard, with shorter lines of code in easy, long lines of code in hard and so on.The issue i will face here will be with my function that pulls the random line from the string. 
+option 2. is to change the size of the text area, aswell as the time i think I could do this with media queries exampe: if hard button clicked textarea = 10vh by 80 vw, this along with a shortend timer would make for a very seamless chnage in the dificulty of the game. Option 3 is to divide my string into 3 seperate strings easy medium and hard, With shorter lines of code in easy, Long lines of code in hard and so on. The issue i will face here will be with my function that pulls the random line from the string. 
 
 ### Fix
-I have solved this bug, by using none of the above methods, The method I used was to duplicate my JS and index.html file twice and link the index files to their own js files. inside thes js files i changed the string with the code blocks to only have short code blocks for the js file linked to easy, medium lenght blocks for medium and long lenght blocks for hard I then added hrefs to the top of each page with css styling to make which ever page you are on the background color of the href would be green. the method I used functions as buttons to click and selelct you dificulty before playing the game.
+I have solved this bug, by using none of the above methods, The method I used was to duplicate my JS and index.html file twice and link the index files to their own js files creating pairs for each dificulty. inside thes js files i changed the string with the code blocks to only have short code blocks for the js file linked to easy, medium lenght blocks for medium and long lenght blocks for hard I then added hrefs to the top of each page with css styling to make which ever page the user is on the background color of the href would be green to allow to know what difficulty level they picked.
 
 
 ### 3. cant get animation to reset when correct answer is typed into text area
@@ -506,6 +509,8 @@ Balsamiq was used to create wireframes for the project
 ### Coolors.co
 The colour scheme and palette were generated and tested using coolors.co
 
+### figam
+figma was used in the mock up stages of this project to get the idea clear in my head and visualise the what needed to happen to make it work
 
 ### Chrome DevTools
 This was used to test and debug my site as I went through the process of building it.
@@ -521,14 +526,17 @@ These services were used to validate my css and HTML code to ensure there was no
 This was my IDE and where I wrote all of my code, Made commits and pushed to Github.
 
 ## Credits
+
+- Stack Overflow community
+- Slack community
+- Code Institute tutor support
 -----
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor Antonio Rodriguez for all of his help, tips and feedback. 
+- My class mates and the students of Code Institute
 - My Cohort facilitator Kasia for all of her help and encouragement throughout the project.
 - The stackoverflow community for responding to questions and having built up a massive database of invaluable tips,tricks and bug fixes
 - W3schools.com for easy to follow lessons
-- Fellow students at Code Institute for answering all of my questions.
 - Code Institute for supplying an amazing course, from the content to the staff and alumni. 
 
 
