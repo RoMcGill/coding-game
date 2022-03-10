@@ -1,4 +1,3 @@
-
 window.addEventListener('load',runGame);
 // text area = textinput
 const textInput = document.querySelector('#text-input');

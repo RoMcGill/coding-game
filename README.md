@@ -355,19 +355,22 @@ this feature is a modal that apears when the timer hits 0. this means the player
  1. #### Accessability/responsiveness
  To test the accessibility of my site I carried out some manual testing using google dev tools, amiresponsive and different devices and screen sizes. my main objective was to ensure that my game was fully playable on all devices but paying more atention to devices with bigger screen sizes as these devices are primarly used with a keyboard which is highly advised when playing the game as thumb typing on a phone or smaller device will leave the user at a big disadvantage.I also manualy checked all sizes by using chromes dev tools.(I used vh and vw units of measurement to achive responsivness on this site)
  2. #### Functionality
- - To test the functionality of the site I used a combination of manual testing and markup validators. Using the W3C markup validator and the w3cssvalidator the site had no errors or warnings.
- ![markup validator]()
+ - To test the functionality of the site I used a combination of manual testing and markup validators. Using the W3C markup validator and the w3cssvalidator the site had no errors and one warning, this warning was caused by my function that gets a random code block from a string. this code block is then displayed in this h3 element.
+ i also tested my Java Script code on jshint.com where the code recieved one warning.
+ ![js validator](assets/Images/jshint.png)
+ ![markup validator](assets/Images/html-validation.png)
 
 
  I generated a lighthouse report on dev tools
- ![lighthouse score]()
+ and recived 100 on everything apart from accesability, this was down to a few style choices I have made and believe they are right for the game.
+ ![lighthouse score](assets/Images/lighthouse.png)
 
- ![css validator]()
+ ![css validator](assets/Images/css-validation.png)
  - Manual Testing. 
  To test the site/game manually I played it many times and console loged my functions along the way to ensure they were being called when I wanted them. throughout the process of coding the website I was continuously testing every feature added and never left a feature that didnt work in the project until it was fully functional. I did this by commenting out code that did not work then uncommenting it as i was working on it.
 3. #### Visual aesthetic
- - I manually checked the colours on my site using colors.co, I did this because I felt that the contrast validators were not great at recognising where the colours are on the page. They try to contrast two colours that are not relevant to eachother. 
- ![contrast check](./assets/images/contrast-check.png)
+ - I manually checked the colours on my site using colors.co, I also recived alot of feedback from my class mates on slack early on that my first colour scheme was not acceptable, After the changes I made I belive that the contrasting colours work well together. I did this because I felt that the contrast validators were not great at recognising where the colours are on the page. They try to contrast two colours that are not relevant to eachother. 
+
 ----
  ## Bugs/Fixes
  
@@ -454,10 +457,10 @@ In the left hand side of the screen there will be a list of options, from these 
 When in the pages section select "branch : main" as the source and ensure the directory is selected as "/(root)"
 then click save. (my save button is currently grey and unclickable as I have aready deployed my site). 
 
-![step 3 for deployment](./assets/images/step-5-deplyment.png) 
+
 4.
 When all of the previous steps are complete you should be given this message
-![step 4 for deplyment](./assets/images/step-6-deployment.png)
+
 
 The site is now live and ready to view by anyone with the link. It can take Github a couple of minutes to push all of the data to the live site and to publish the page.
 
@@ -494,13 +497,11 @@ Press Enter. Your local clone will be created.
 
 - HTML5
 - CSS
--Java Script
+- Java Script
 
  ### Balsamiq
 Balsamiq was used to create wireframes for the project
 
-### Font Awesome
-The project uses icons from Font Awesome in the nav bar
 
 ### Coolors.co
 The colour scheme and palette were generated and tested using coolors.co
@@ -510,12 +511,8 @@ The colour scheme and palette were generated and tested using coolors.co
 This was used to test and debug my site as I went through the process of building it.
 The lighthouse feature was used to create a report on the performance of the site.
 
-### Google Fonts
-The fonts used on the site are imported from Google Fonts.
-
-### Formspree
-This was used to link my contribute form directly to my email address.
-
+###jsHint.com
+jshint was used to validate my Javascript code.
 
 ### W3C Validation Services
 These services were used to validate my css and HTML code to ensure there was no errors.
@@ -525,23 +522,13 @@ This was my IDE and where I wrote all of my code, Made commits and pushed to Git
 
 ## Credits
 -----
-### Content and media chnage this 
-- https://www.wikipedia.org/ for information on music genres.
-- https://www.billboard.com/ + https://www.rollingstone.com/ for in depth information on the songs and artists.
-- https://www.freepik.com/ + https://www.shutterstock.com/ + https://unsplash.com/s/photos/singer for images.
-- https://youtube.com/ for all video content.
-
-### Acknowledgements chnage some
+### Acknowledgements
 
 - I would like to thank my Code Institute mentor Antonio Rodriguez for all of his help, tips and feedback. 
 - My Cohort facilitator Kasia for all of her help and encouragement throughout the project.
-- 
 - The stackoverflow community for responding to questions and having built up a massive database of invaluable tips,tricks and bug fixes
-- 
 - W3schools.com for easy to follow lessons
-- 
 - Fellow students at Code Institute for answering all of my questions.
-- 
 - Code Institute for supplying an amazing course, from the content to the staff and alumni. 
 
 
