@@ -201,6 +201,9 @@ button{
     pointer-events: all;
     cursor: pointer;
 }
+.btn-container{
+    padding-top: 15px;
+}
 .scoreboard{
     padding-top: 30px;
 }
