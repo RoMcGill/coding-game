@@ -120,8 +120,5 @@ textInput.addEventListener(
     'paste', (e) => {
         e.preventDefault();
         textInput.innerText = ("NO CHEATING !");
-        console.log("NO CHEATING !");
-    
-
     }
 );
