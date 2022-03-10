@@ -18,9 +18,7 @@ let restart = document.getElementById('btn');
 let scoreDisplay = document.getElementsByClassName('score');
 // score
 let score = 0;
-
 //  of code in string to be displayed by the show line function
-
 const lines  =
 [
     '<div id="call">call div</div>',
@@ -31,85 +29,20 @@ const lines  =
     '<ol><li>list item 1</li></ol>',
     '<input type="checkbox" id="checkbox">',
     '<label for="checkbox">Slider</label>',
-
- 
 ];
-
-/*
-let easy =
-[
-    '<h1>Heading</h1>',
-    '<p>Paragraph</p>',
-    '<h1>big title</h1>',
-    '<h5>small title</h5>',
-    '<button>Filter</button>',
-    
-];
-
-let medium =
-[
-    
-    '<h2>descriptive subtitle</h2>',
-    '<div id="call">call div</div>',
-    '<span>this is a span</span>',
-    
-];
-
-let hard =
-[
-    
-    '<article> this is an article </article>',
-    '<section class="hero-border">',
-    '<div class="about-section"></div>',
-    '<button id = "open">open</button>',
-    '<ol><li>list item 1</li></ol>',
-    '<script src="assets/JS/main.js"></script>',
-    '<input type="checkbox" id="checkbox">',
-    '<label for="checkbox">Slider</label>',
-    '<img src="./assets/images/hero.jpg" alt="hero image">',
-    '<link rel="stylesheet" href="assets/CSS/styles.css">',
-    
-];
-*/
-
-
 //plays game
 function runGame(){
     textInput.classList.add('incorrect-background');
      // start matching on text input
         textInput.addEventListener('input', checkInput);
         setInterval(checkStatus, 50);
-        displayScore();
-       
-        
-        
-       
+        displayScore();        
 }
 // gets random item from string
 function showLine(lines){
     const randIndex = Math.floor(Math.random() * lines.length);
     currentLine.innerText = lines[randIndex];
 }
-/*
-function showLine(){
-    if(easy){
-    const randIndex = Math.floor(Math.random() * easy.length);
-    currentLine.innerText = easy[randIndex];
-    console.log('showlineeasy');
-
-    }if(medium){
-        const randIndex = Math.floor(Math.random() * medium.length);
-        currentLine.innerText = medium[randIndex];
-        console.log('showlinemed');
-
-    }if(hard){
-    const randIndex = Math.floor(Math.random() * hard.length);
-    currentLine.innerText = hard[randIndex];
-    console.log('showlinehard');
-    }
-}
-*/
-
 // countdown timer, decreasing 
 setInterval(timer, 1000);
 function timer() {
@@ -124,7 +57,6 @@ function timer() {
     timeDisplay.innerHTML = time;
     
 }
-
 //show modal for when timer runs out
 function showModal(){
     
@@ -136,13 +68,8 @@ function showModal(){
 closeModal.onclick = function() {
     modalContainer.style.display='none';
     time = '';
-    textInput.value='';
-    
-    
-    
-        
+    textInput.value='';        
 };
-
 // restart game on click of start button
 restart.onclick = function(){
     showLine(lines);
@@ -154,17 +81,10 @@ restart.onclick = function(){
     currentLine.classList.add("linedown");
     focusTextarea();
 };
-
-
-
-
 //checks for correct answer
 function checkStatus(){
 
 }
-
-
-
 function checkInput(){
     if (textInput.value === currentLine.innerText){
         setInterval(checkStatus, 50);
@@ -190,8 +110,6 @@ function checkInput(){
     function focusTextarea(){
     document.getElementById("text-input").focus();
 }
-
-
 //display score
 function displayScore(){
     scoreDisplay[0].innerHTML=score;
@@ -207,26 +125,3 @@ textInput.addEventListener(
 
     }
 );
-
-
-
-/*
-
-function setDifficulty(){
-
-    if (easy){
-        showLine(easy);
-        console.log('easy set');
-    }
-    if (medium){
-        showLine(medium);
-        console.log('med set');
-
-    }
-    if (hard){
-        showLine(hard);
-        console.log('hard set');
-    }
-    
-}
-*/
